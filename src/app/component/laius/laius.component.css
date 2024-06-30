@@ -1,0 +1,29 @@
+.laius {
+  background-color: #e2aaae;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100vw;
+  height: 150vh;
+}
+
+.laius_title {
+  /* background-color: red; */
+  display: flex;
+  text-align: center;
+  width: 50%;
+  margin: auto 100px auto 100px;
+  font-size: 32px;
+
+}
+
+.laius_pitch {
+  /* background-color: blue; */
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 50%;
+  margin: auto 100px auto 100px;
+  font-size: 24px;
+}

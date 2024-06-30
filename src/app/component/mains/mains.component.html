@@ -1,0 +1,29 @@
+<div class="mains">
+    <h1 class="mains_title">Soins des mains et des pieds</h1>
+    <div class="mains_container">
+        <div class="mains_visage">
+            <div class="mains_liste">
+                <h1>Beauté des mains et des pieds</h1>
+                <div *ngFor="let mains of mainsBeaute" class="ligne">
+                    <p class="name">{{ mains.name }} </p>
+                    <p class="hiddenDot">{{dot}}</p>
+                    <div class="prix">
+                        <p>{{ mains.prix }} €</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mains_maillot">
+            <div class="mains_liste">
+                <h1>Semi Permanent</h1>
+                <div *ngFor="let mains of mainsSemiPermanent" class="ligne">
+                    <p class="name">{{ mains.name }} </p>
+                    <p class="hiddenDot">{{dot}}</p>
+                    <div class="prix">
+                        <p>{{ mains.prix }} €</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

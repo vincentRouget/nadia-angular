@@ -1,0 +1,35 @@
+.header {
+    background-image: url('../../../assets/header.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 110vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header_title_top {
+    text-align: center;
+    font-size: 56px;
+    color: #F6F7EF;
+    text-shadow:
+        -2px -2px 0 #000,
+        2px -2px 0 #000,
+        -2px 2px 0 #000,
+        2px 2px 0 #000;
+    font-weight: bold;
+}
+
+.header_title_bottom {
+    text-align: center;
+    font-size: 48px;
+    color: #F6F7EF;
+    text-shadow:
+    -2px -2px 0 #000,
+    2px -2px 0 #000,
+    -2px 2px 0 #000,
+    2px 2px 0 #000;
+    font-weight: bold;
+}

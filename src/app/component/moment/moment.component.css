@@ -1,0 +1,27 @@
+.moment {
+    background-image: url('../../../assets/moment.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 100%;
+    width: 100vw;
+    height: 150vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+.moment_title {
+    width: 30vw;
+    text-align: center;
+    font-size: 56px;
+    color: #F6F7EF;
+    text-shadow:
+        -2px -2px 0 #000,
+        2px -2px 0 #000,
+        -2px 2px 0 #000,
+        2px 2px 0 #000;
+    font-weight: bold;
+    margin-top: 5vh;
+    margin-right: 5vw;
+}

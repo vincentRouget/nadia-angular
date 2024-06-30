@@ -1,0 +1,14 @@
+<div class="commentary">
+    <div class="commentary_title">
+      <h1>Nouveau commentaire</h1>
+    </div>
+    <div class="commentary_form">
+      <label for="commentaryContent"></label>
+      <textarea id="commentaryContent" [(ngModel)]="content" (input)="onContentChange($event)" placeholder="Entrez votre commentaire ici"></textarea>
+      <p>Caractères restants : {{ restCharacter }}</p>
+    </div>
+    <div class="commentary_button">
+      <button (click)="sendCommentary()">Envoyer</button>
+    </div>
+  </div>
+  

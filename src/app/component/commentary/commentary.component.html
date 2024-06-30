@@ -1,0 +1,34 @@
+<div [ngClass]="showLimitedComments() ? 'commentary' : 'commentary_url'">
+    <div class="commentary_title">
+        <h1>Nos clients ont aimé</h1>
+    </div>
+    <div class="commentary_container">
+        <div class="commentary_top">
+            <div class="commentary_contents">
+                <ng-container *ngIf="showLimitedComments()">
+                    <div *ngFor="let commentary of allComments.slice(0, 6)" class="commentary_one">
+                        <p class="commentary_date">Le {{commentary.date}}</p>
+                        <p class="commentary_content">" {{commentary.content}} "</p>
+                    </div>
+                </ng-container>
+                <ng-container *ngIf="!showLimitedComments()">
+                    <div *ngFor="let commentary of allComments" class="commentary_one">
+                        <p class="commentary_date">Le {{commentary.date}}</p>
+                        <p class="commentary_content">" {{commentary.content}} "</p>
+                    </div>
+                </ng-container>
+            </div>
+        </div>
+        <div class="commentary_bottom">
+            <div class="commentary_button">
+                <ng-container *ngIf="showLimitedComments()">
+                    <a [routerLink]="['/commentaires']" class="route">Voir plus...</a>
+                </ng-container>
+                <ng-container *ngIf="!showLimitedComments()">
+                    <a [routerLink]="['/']" class="route">Retour</a>
+                </ng-container>
+                <a [routerLink]="['/avis']" class="route">Ecrire un commentaire</a>
+            </div>
+        </div>
+    </div>
+</div>

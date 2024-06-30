@@ -1,0 +1,36 @@
+<div class="visage">
+    <h1 class="visage_title">Soins du visage</h1>
+    <div class="visage_container">
+        <div class="visage_visage">
+            <div class="visage_liste">
+                <h1>Les soins du visage</h1>
+                <div *ngFor="let visage of visageSoins" class="ligne">
+                    <div class="name_detail">
+                        <p class="name">{{ visage.name }} </p>
+                        <p class="detail">{{visage.detail}}</p>
+                    </div>
+                    <p class="hiddenDot">{{dot}}</p>
+                    <br>
+                    <div class="prix">
+                        <p>{{ visage.prix }} €</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="visage_japonais">
+            <div class="visage_liste">
+                <h1>Modelage facial japonais</h1>
+                <div *ngFor="let visage of visageJaponais" class="ligne">
+                    <div class="name_detail">
+                        <p class="name">{{ visage.name }} </p>
+                        <p class="detail">{{visage.detail}}</p>
+                    </div>
+                    <p class="hiddenDot">{{dot}}</p>
+                    <div class="prix">
+                        <p>{{ visage.prix }} €</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

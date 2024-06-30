@@ -1,0 +1,88 @@
+.epilation {
+  background-image: url('../../../assets/epilation_page.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center 100%;
+  width: 100vw;
+  min-height: 104vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  color: #b28c23;
+}
+
+.epilation_title {
+  background-color: #fbf7e9;
+  text-align: center;
+  font-size: 40px;
+  margin-top: 15vh;
+  margin-bottom: 10vh;
+  padding: 10px 30px;
+  border: 2px solid #b28c23;
+  text-decoration: underline;
+}
+
+.epilation_container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 90vw;
+  gap: 30px;
+}
+
+.epilation_visage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.epilation_maillot {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.epilation_corps {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.epilation_liste {
+  background-color: #fbf7e9;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 20px 20px 20px;
+  border: 2px solid #b28c23;
+}
+
+.ligne {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 300px;
+  margin-top: -10px;
+  font-size: 24px;
+}
+
+.name {
+  white-space: nowrap;
+  margin-right: 5px;
+}
+
+.hiddenDot {
+  width: 100%;
+  overflow: hidden;
+}
+
+.prix {
+  white-space: nowrap;
+  margin-left: 5px;
+}

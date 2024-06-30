@@ -1,0 +1,110 @@
+.footer {
+    background-color: #e2aaae;
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    /* height: 100vh; */
+}
+
+.top {
+    /* background-color: yellow; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.left {
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    height: 100%;
+}
+
+.map_container {
+    background-image:
+        linear-gradient(0deg, rgba(226, 170, 174, 1) 0%, rgba(226, 170, 174, 0) 15%),
+        linear-gradient(90deg, rgba(226, 170, 174, 1) 0%, rgba(226, 170, 174, 0) 15%),
+        linear-gradient(180deg, rgba(226, 170, 174, 1) 0%, rgba(226, 170, 174, 0) 15%),
+        linear-gradient(270deg, rgba(226, 170, 174, 1) 0%, rgba(226, 170, 174, 0) 15%),
+        /* radial-gradient(circle, rgba(226, 170, 174, 0) 0%, rgba(226, 170, 174, 1) 100%), */
+        url('../../../assets/map.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-position: center 100%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 80%;
+    overflow: hidden;
+}
+
+.image_map {
+    opacity: 0;
+    /* width:100%; */
+    height: 100%;
+}
+
+.right {
+    /* background-color: blue; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:40px;
+    width: 40%;
+    height: 100%;
+    font-size: 32px;
+}
+
+.distance {
+    /* background-color: grey; */
+    text-align: center;
+    padding:0px 100px;
+}
+
+.phone {
+    /* background-color: pink; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 0;
+}
+
+.mail {
+    /* background-color: yellow; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.button_mail {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.social {
+    /* background-color: green; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 0;
+}
+
+.bottom {
+    background-color: grey;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border-top: 1px solid grey;
+}
