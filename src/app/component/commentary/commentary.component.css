@@ -18,6 +18,7 @@
   align-items: center;
   width: 100vw;
   min-height: 150vh;
+  padding-top: 20vh;
   padding-bottom: 50vh;
 }
 
@@ -138,6 +139,7 @@
 }
 
 .route {
+  /* background-color: #b28c23; */
   width: 22vw;
   display: flex;
   flex-direction: row;
@@ -145,4 +147,6 @@
   align-items: flex-start;
   font-size: 40px;
   text-decoration: none;
+  /* border-radius: 10px; */
+  color:blueviolet;
 }

@@ -1,0 +1,29 @@
+<div class="maquillage">
+    <h1 class="maquillage_title">Maquillage et coloration</h1>
+    <div class="maquillage_container">
+        <div class="maquillage_visage">
+            <div class="maquillage_liste">
+                <h1>MAQUILLAGE</h1>
+                <div *ngFor="let maquillage of maquillageArray" class="ligne">
+                    <p class="name">{{ maquillage.name }} </p>
+                    <p class="hiddenDot">{{dot}}</p>
+                    <div class="prix">
+                        <p>{{ maquillage.prix }} €</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="maquillage_maillot">
+            <div class="maquillage_liste">
+                <h1>COLORATION</h1>
+                <div *ngFor="let maquillage of colorationArray" class="ligne">
+                    <p class="name">{{ maquillage.name }} </p>
+                    <p class="hiddenDot">{{dot}}</p>
+                    <div class="prix">
+                        <p>{{ maquillage.prix }} €</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

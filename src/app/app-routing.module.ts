@@ -8,7 +8,9 @@ import { MainsComponent } from './component/mains/mains.component';
 import { VisageComponent } from './component/visage/visage.component';
 import { CorpsComponent } from './component/corps/corps.component';
 import { MassageComponent } from './component/massage/massage.component';
+import { MaquillageComponent } from './component/maquillage/maquillage.component';
 import { CommentaryComponent } from './component/commentary/commentary.component';
+import { NavbarAccueilComponent } from './component/navbar-accueil/navbar-accueil.component';
 import { SendCommentaryComponent } from './component/send-commentary/send-commentary.component';
 
 const routes: Routes = [
@@ -18,7 +20,13 @@ const routes: Routes = [
   },
   {
     path: 'commentaires',
-    component: CommentaryComponent
+    component: NavbarAccueilComponent,
+    children: [
+      {
+        path: '',
+        component: CommentaryComponent
+      }
+    ]
   },
   {
     path: 'epilation',
@@ -71,8 +79,24 @@ const routes: Routes = [
     ]
   },
   {
+    path: 'maquillage',
+    component: NavbarComponent,
+    children: [
+      {
+        path: '',
+        component: MaquillageComponent
+      }
+    ]
+  },
+  {
     path: 'avis',
-    component: SendCommentaryComponent
+    component: NavbarAccueilComponent,
+    children: [
+      {
+        path: '',
+        component: SendCommentaryComponent
+      }
+    ]
   },
   {
     path: '**',

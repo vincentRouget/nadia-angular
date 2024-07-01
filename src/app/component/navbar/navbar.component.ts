@@ -1,56 +1,50 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router, NavigationEnd } from '@angular/router';
-import { filter } from 'rxjs/operators';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css']
 })
+
 export class NavbarComponent implements OnInit {
 
   currentUrl: string = '';
 
   constructor(
     private router: Router,
-    private route: ActivatedRoute
-  ) { }
+  ) { };
 
   ngOnInit(): void {
     window.scrollTo(0, 0);
-    // this.router.events.pipe(
-    //   filter(event => event instanceof NavigationEnd)
-    // ).subscribe(() => {
-    //   const currentUrl = this.router.url;
-    // });
-  }
+  };
 
-  public hideEpilation(): boolean {
+  public focusEpilation(): boolean {
     const currentUrl = this.router.url;
     return currentUrl !== '/epilation';
   };
 
-  public hideMains(): boolean {
+  public focusMains(): boolean {
     const currentUrl = this.router.url;
     return currentUrl !== '/soins_des_mains';
   };
 
-  public hideVisage(): boolean {
+  public focusVisage(): boolean {
     const currentUrl = this.router.url;
     return currentUrl !== '/visage';
   };
 
-  public hideCorps(): boolean {
+  public focusCorps(): boolean {
     const currentUrl = this.router.url;
     return currentUrl !== '/corps';
   };
 
-  public hideMassage(): boolean {
+  public focusMassage(): boolean {
     const currentUrl = this.router.url;
     return currentUrl !== '/massage';
   };
 
-  public hideMaquillage(): boolean {
+  public focusMaquillage(): boolean {
     const currentUrl = this.router.url;
     return currentUrl !== '/maquillage';
   };

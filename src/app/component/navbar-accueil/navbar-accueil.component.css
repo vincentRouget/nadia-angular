@@ -1,4 +1,4 @@
-.navbar {
+.navbarAccueil {
     background-color: #fbf7e9;
     position: absolute;
     top: 0;
@@ -10,34 +10,23 @@
     height: 10vh;
 }
 
-.navbar_container {
+.navbarAccueil_container {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     width: 100%;
     height: 100%;
 }
 
-.navbar_button {
-    background-color: #fbf7e9;
+.navbarAccueil_button {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
     height: 100%;
+    margin-left: 50px;
 }
 
-.navbar_button_focus {
-    background-color: #f7e9fb;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    color: black;
-}
-
-.navbar_link {
+.navbarAccueil_link {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -50,24 +39,7 @@
     color: grey;
 }
 
-.navbar_link_focus {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    text-decoration: none;
-    font-size: 24px;
-    white-space: nowrap;
-    cursor: pointer;
-    color: black
-}
-
-.navbar_link_focus {}
-
-.navbar_button:hover {}
-
-.navbar_link:hover {
+.navbarAccueil_link:hover {
     text-decoration: underline;
     color: black;
 }

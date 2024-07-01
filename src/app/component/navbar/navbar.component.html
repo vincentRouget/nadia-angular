@@ -5,33 +5,33 @@
                 Accueil
             </a>
         </div>
-        <div [ngClass]="hideEpilation() ? 'navbar_button' : 'hide_button'">
-            <a [routerLink]="['/epilation']" class="navbar_link">
+        <div [ngClass]="focusEpilation() ? 'navbar_button' : 'navbar_button_focus'">
+            <a [routerLink]="['/epilation']" [ngClass]="focusEpilation() ? 'navbar_link' : 'navbar_link_focus'">
                 Epilation
             </a>
         </div>
-        <div [ngClass]="hideMains() ? 'navbar_button' : 'hide_button'">
-            <a [routerLink]="['/soins_des_mains']" class="navbar_link">
-                Beauté des mains
+        <div [ngClass]="focusMains() ? 'navbar_button' : 'navbar_button_focus'">
+            <a [routerLink]="['/soins_des_mains']" [ngClass]="focusMains() ? 'navbar_link' : 'navbar_link_focus'">
+                Soins des mains
             </a>
         </div>
-        <div [ngClass]="hideVisage() ? 'navbar_button' : 'hide_button'">
-            <a [routerLink]="['/visage']" class="navbar_link">
+        <div [ngClass]="focusVisage() ? 'navbar_button' : 'navbar_button_focus'">
+            <a [routerLink]="['/visage']" [ngClass]="focusVisage() ? 'navbar_link' : 'navbar_link_focus'">
                 Soins du visage
             </a>
         </div>
-        <div [ngClass]="hideCorps() ? 'navbar_button' : 'hide_button'">
-            <a [routerLink]="['/corps']" class="navbar_link">
+        <div [ngClass]="focusCorps() ? 'navbar_button' : 'navbar_button_focus'">
+            <a [routerLink]="['/corps']" [ngClass]="focusCorps() ? 'navbar_link' : 'navbar_link_focus'">
                 Soins du corps
             </a>
         </div>
-        <div [ngClass]="hideMassage() ? 'navbar_button' : 'hide_button'">
-            <a [routerLink]="['/massage']" class="navbar_link">
+        <div [ngClass]="focusMassage() ? 'navbar_button' : 'navbar_button_focus'">
+            <a [routerLink]="['/massage']" [ngClass]="focusMassage() ? 'navbar_link' : 'navbar_link_focus'">
                 Massage
             </a>
         </div>
-        <div [ngClass]="hideMaquillage() ? 'navbar_button' : 'hide_button'">
-            <a [routerLink]="['/maquillage']" class="navbar_link">
+        <div [ngClass]="focusMaquillage() ? 'navbar_button' : 'navbar_button_focus'">
+            <a [routerLink]="['/maquillage']" [ngClass]="focusMaquillage() ? 'navbar_link' : 'navbar_link_focus'">
                 Maquillage
             </a>
         </div>

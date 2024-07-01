@@ -18,6 +18,9 @@ export class HomeComponent implements OnInit, AfterViewInit {
   };
 
   ngOnInit(): void {
+    const storedPosition = localStorage.getItem('scrollPosition');
+    let localPosition = storedPosition ? +storedPosition : 0;
+    window.scrollTo(0, localPosition);
     // ngOnInit is a good place to get initial values
   };
 
