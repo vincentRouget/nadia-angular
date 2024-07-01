@@ -7,6 +7,7 @@ import { Mains } from '../../features/models/mains.model';
   templateUrl: './mains.component.html',
   styleUrls: ['./mains.component.css'],
 })
+
 export class MainsComponent implements OnInit {
 
   public dot: string = '.'.repeat(500);
@@ -24,7 +25,7 @@ export class MainsComponent implements OnInit {
   public preparation: Mains;
   public semi: Mains;
   public depose: Mains;
-  
+
   public mainsSemiPermanent: Mains[] = [];
 
   constructor() {
@@ -52,9 +53,9 @@ export class MainsComponent implements OnInit {
       this.semi,
       this.depose,
     ];
-  }
+  };
 
   ngOnInit(): void {
     window.scrollTo(0, 0);
-  }
+  };
 }

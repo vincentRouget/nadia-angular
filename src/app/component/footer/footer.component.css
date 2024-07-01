@@ -27,13 +27,7 @@
 }
 
 .map_container {
-    background-image:
-        linear-gradient(0deg, rgba(226, 170, 174, 1) 0%, rgba(226, 170, 174, 0) 15%),
-        linear-gradient(90deg, rgba(226, 170, 174, 1) 0%, rgba(226, 170, 174, 0) 15%),
-        linear-gradient(180deg, rgba(226, 170, 174, 1) 0%, rgba(226, 170, 174, 0) 15%),
-        linear-gradient(270deg, rgba(226, 170, 174, 1) 0%, rgba(226, 170, 174, 0) 15%),
-        /* radial-gradient(circle, rgba(226, 170, 174, 0) 0%, rgba(226, 170, 174, 1) 100%), */
-        url('../../../assets/map.jpg');
+    background-image: url('../../../assets/map.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     /* background-position: center 100%; */
@@ -57,7 +51,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap:40px;
+    gap: 40px;
     width: 40%;
     height: 100%;
     font-size: 32px;
@@ -66,7 +60,7 @@
 .distance {
     /* background-color: grey; */
     text-align: center;
-    padding:0px 100px;
+    padding: 0px 100px;
 }
 
 .phone {

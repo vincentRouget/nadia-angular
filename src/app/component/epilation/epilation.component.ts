@@ -1,5 +1,4 @@
-import { CommonModule } from '@angular/common';
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Epilation } from '../../features/models/epilation.model';
 
 @Component({
@@ -7,6 +6,7 @@ import { Epilation } from '../../features/models/epilation.model';
   templateUrl: './epilation.component.html',
   styleUrls: ['./epilation.component.css'],
 })
+
 export class EpilationComponent implements OnInit {
 
   public dot: string = '.'.repeat(500);
@@ -35,7 +35,7 @@ export class EpilationComponent implements OnInit {
   public jambes: Epilation;
   public bras: Epilation;
   public torse: Epilation;
-  
+
   public epilationCorps: Epilation[] = [];
 
   constructor() {
@@ -82,9 +82,9 @@ export class EpilationComponent implements OnInit {
       this.bras,
       this.torse
     ];
-  }
+  };
 
-  ngOnInit(): void { 
+  ngOnInit(): void {
     window.scrollTo(0, 0);
-  }
+  };
 }

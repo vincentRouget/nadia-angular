@@ -7,14 +7,30 @@
             <div class="commentary_contents">
                 <ng-container *ngIf="showLimitedComments()">
                     <div *ngFor="let commentary of allComments.slice(0, 6)" class="commentary_one">
-                        <p class="commentary_date">Le {{commentary.date}}</p>
-                        <p class="commentary_content">" {{commentary.content}} "</p>
+                        <div class="center">
+                            <div class="commentary_date">Le {{commentary.date}}</div>
+                            <div class="commentary_line">
+                                <span class="guillemet">"</span>
+                                <div class="content-container">
+                                    <span class="commentary_content">{{commentary.content}}</span>
+                                </div>
+                                <span class="guillemet closing">"</span>
+                            </div>
+                        </div>
                     </div>
                 </ng-container>
                 <ng-container *ngIf="!showLimitedComments()">
                     <div *ngFor="let commentary of allComments" class="commentary_one">
-                        <p class="commentary_date">Le {{commentary.date}}</p>
-                        <p class="commentary_content">" {{commentary.content}} "</p>
+                        <div class="center">
+                            <div class="commentary_date">Le {{commentary.date}}</div>
+                            <div class="commentary_line">
+                                <span class="guillemet">"</span>
+                                <div class="content-container">
+                                    <span class="commentary_content">{{commentary.content}}</span>
+                                </div>
+                                <span class="guillemet closing">"</span>
+                            </div>
+                        </div>
                     </div>
                 </ng-container>
             </div>

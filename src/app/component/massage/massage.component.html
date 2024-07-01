@@ -1,0 +1,17 @@
+<div class="massage">
+    <h1 class="massage_title">Modelages Ayurvédiques (massage indien)</h1>
+    <div class="massage_container">
+        <div class="massage_visage">
+            <div *ngFor="let massage of massageArray" class="ligne">
+                <div class="name_detail">
+                    <p class="name">{{ massage.name }} </p>
+                    <p class="detail">{{massage.detail}}</p>
+                </div>
+                <p class="hiddenDot">{{dot}}</p>
+                <div class="prix">
+                    <p>{{ massage.prix }} €</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

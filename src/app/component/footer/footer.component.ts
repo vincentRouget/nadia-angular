@@ -10,4 +10,5 @@ export class FooterComponent {
 
   map: string = '../../../assets/map.jpg';
   facebook: string = '../../../assets/facebook.png';
+  
 }

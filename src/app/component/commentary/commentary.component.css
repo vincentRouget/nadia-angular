@@ -6,8 +6,8 @@
   align-items: center;
   width: 100vw;
   min-height: 150vh;
-  padding-top: 30vh;
-  padding-bottom: 30vh;
+  padding-top: 50vh;
+  padding-bottom: 50vh;
 }
 
 .commentary_url {
@@ -22,9 +22,8 @@
 }
 
 .commentary_title {
-  /* background-color: yellow; */
   font-size: 32px;
-  margin-bottom: 80px;
+  margin-bottom: 15vh;
 }
 
 .commentary_container {
@@ -36,54 +35,88 @@
 }
 
 .commentary_top {
-  /* background-color: red; */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
-  margin-bottom: 10vh;
+  margin-bottom: 5vh;
 }
 
 .commentary_contents {
-  /* background-color: blue; */
   width: 90vw;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: 60px;
+  gap: 10px;
 }
 
 .commentary_one {
   background-color: #fbf7e9;
+  /* background-color: yellow; */
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  width: 500px;
-  height: 300px;
+  width: 26vw;
+  height: 40vh;
   border: 2px solid #b28c23;
   color: #b28c23;
 }
-
+.center {
+  /* background-color: grey; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 70%;
+}
 .commentary_date {
-  /* background-color: pink; */
+  /* background-color: green; */
+  text-align: center;
   font-size: 24px;
-  margin-bottom: -10px;
+  margin-top: 4vh;
+  margin-bottom: 3vh;
+}
+
+.commentary_line {
+  /* background-color: pink; */
+  display: flex;
+  flex-direction: row;
+  font-size: 32px;
+  font-style: italic;
+}
+
+.guillemet {
+  /* background-color: red; */
+  display: inline-block;
+  width: 2vw;
+  text-align: center;
+  margin-left: 5px;
+}
+
+.content-container {
+  /* background-color: yellow; */
+  display: flex;
+  width:100%;
 }
 
 .commentary_content {
   /* background-color: blue; */
-  width: 80%;
-  font-size: 32px;
-  font-style: italic;
   display: -webkit-box;
-  -webkit-line-clamp: 5;
+  -webkit-line-clamp: 6;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
+  text-align: center;
+  width: 100%;
+  /* margin:100px; */
+  /* padding:10px; */
+}
+
+.closing {
+  align-self: flex-end;
 }
 
 .commentary_bottom {
@@ -95,7 +128,6 @@
 }
 
 .commentary_button {
-  /* background-color: yellow; */
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -106,7 +138,6 @@
 }
 
 .route {
-  /* background-color: violet; */
   width: 22vw;
   display: flex;
   flex-direction: row;

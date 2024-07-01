@@ -8,6 +8,7 @@ import { Visage } from '../../features/models/visage.model';
   templateUrl: './visage.component.html',
   styleUrl: './visage.component.css'
 })
+
 export class VisageComponent implements OnInit {
   public dot: string = '.'.repeat(500);
 
@@ -45,9 +46,9 @@ export class VisageComponent implements OnInit {
     this.visageJaponais = [
       this.lifting,
       this.cure]
-  }
+  };
 
   ngOnInit(): void {
     window.scrollTo(0, 0);
-  }
+  };
 }

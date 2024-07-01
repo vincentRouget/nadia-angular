@@ -1,5 +1,5 @@
-.visage {
-    background-image: url('../../../assets/visage_page.jpg');
+.massage {
+    background-image: url('../../../assets/massage_page.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center 100%;
@@ -12,63 +12,40 @@
     color: #b28c23;
 }
 
-.visage_title {
+.massage_title {
     background-color: #fbf7e9;
     text-align: center;
     font-size: 40px;
     margin-top: 15vh;
-    margin-bottom: 8vh;
+    margin-bottom: 15vh;
     padding: 10px 50px;
     border: 2px solid #b28c23;
     text-decoration: underline;
 }
 
-.visage_container {
-    /* background-color: green; */
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    width: 90vw;
-    gap: 20px;
-}
-
-.visage_visage {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.visage_japonais {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.visage_liste {
+.massage_container {
     background-color: #fbf7e9;
-    /* background-color: blue; */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 10px 50px;
+    padding: 50px 50px 0px 50px;
     border: 2px solid #b28c23;
+
 }
 
 .ligne {
     /* background-color: pink; */
     display: flex;
-    width: 35vw;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 40vw;
     font-size: 30px;
-    margin-bottom: 2vh;
+    margin-bottom: 50px;
 }
 
 .name {
-    /* background-color: yellow; */
-    white-space: nowrap;
     margin: 0 5px 0 0;
 }
 
@@ -83,12 +60,12 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* line-height: 0; */
 }
 
 .hiddenDot {
     /* background-color: green; */
-    width: 100%;
+    width: 50%;
+    height: 100%;
     overflow: hidden;
 }
 

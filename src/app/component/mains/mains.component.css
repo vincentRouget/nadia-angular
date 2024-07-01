@@ -18,7 +18,7 @@
   font-size: 40px;
   margin-top: 15vh;
   margin-bottom: 10vh;
-  padding: 10px 30px;
+  padding: 10px 50px;
   border: 2px solid #b28c23;
   text-decoration: underline;
 }
@@ -46,20 +46,13 @@
   align-items: center;
 }
 
-.mains_corps {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
 .mains_liste {
   background-color: #fbf7e9;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0px 20px 20px 20px;
+  padding: 10px 50px;
   border: 2px solid #b28c23;
 }
 
@@ -67,9 +60,9 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 300px;
+  width: 30vw;
   margin-top: -10px;
-  font-size: 24px;
+  font-size: 30px;
 }
 
 .name {

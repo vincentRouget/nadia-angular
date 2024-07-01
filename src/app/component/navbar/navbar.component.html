@@ -1,0 +1,40 @@
+<div class="navbar">
+    <div class="navbar_container">
+        <div class="navbar_button">
+            <a [routerLink]="['/']" class="navbar_link">
+                Accueil
+            </a>
+        </div>
+        <div [ngClass]="hideEpilation() ? 'navbar_button' : 'hide_button'">
+            <a [routerLink]="['/epilation']" class="navbar_link">
+                Epilation
+            </a>
+        </div>
+        <div [ngClass]="hideMains() ? 'navbar_button' : 'hide_button'">
+            <a [routerLink]="['/soins_des_mains']" class="navbar_link">
+                Beauté des mains
+            </a>
+        </div>
+        <div [ngClass]="hideVisage() ? 'navbar_button' : 'hide_button'">
+            <a [routerLink]="['/visage']" class="navbar_link">
+                Soins du visage
+            </a>
+        </div>
+        <div [ngClass]="hideCorps() ? 'navbar_button' : 'hide_button'">
+            <a [routerLink]="['/corps']" class="navbar_link">
+                Soins du corps
+            </a>
+        </div>
+        <div [ngClass]="hideMassage() ? 'navbar_button' : 'hide_button'">
+            <a [routerLink]="['/massage']" class="navbar_link">
+                Massage
+            </a>
+        </div>
+        <div [ngClass]="hideMaquillage() ? 'navbar_button' : 'hide_button'">
+            <a [routerLink]="['/maquillage']" class="navbar_link">
+                Maquillage
+            </a>
+        </div>
+    </div>
+</div>
+<router-outlet></router-outlet>

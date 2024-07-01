@@ -5,6 +5,9 @@ import { Component } from '@angular/core';
   templateUrl: './moment.component.html',
   styleUrl: './moment.component.css'
 })
+
 export class MomentComponent {
+
   moment: string = '../../../assets/moment.jpg';
+
 }

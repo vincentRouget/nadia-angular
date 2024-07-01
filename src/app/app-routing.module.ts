@@ -1,60 +1,74 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { ScrollToTopDirective } from './core/services/ScrollService';
-
-import { HeaderComponent } from './component/header/header.component';
-import { LaiusComponent } from './component/laius/laius.component';
-import { PrestationComponent } from './component/prestation/prestation.component';
+import { HomeComponent } from './component/home/home.component';
+import { NavbarComponent } from './component/navbar/navbar.component';
 import { EpilationComponent } from './component/epilation/epilation.component';
-import { VisageComponent } from './component/visage/visage.component';
 import { MainsComponent } from './component/mains/mains.component';
-import { MomentComponent } from './component/moment/moment.component';
+import { VisageComponent } from './component/visage/visage.component';
+import { CorpsComponent } from './component/corps/corps.component';
+import { MassageComponent } from './component/massage/massage.component';
 import { CommentaryComponent } from './component/commentary/commentary.component';
 import { SendCommentaryComponent } from './component/send-commentary/send-commentary.component';
 
-export const routes: Routes = [
+const routes: Routes = [
   {
     path: '',
-    component: HeaderComponent,
+    component: HomeComponent
+  },
+  {
+    path: 'commentaires',
+    component: CommentaryComponent
+  },
+  {
+    path: 'epilation',
+    component: NavbarComponent,
     children: [
       {
         path: '',
-        component: LaiusComponent,
-        outlet: 'main'
-      },
+        component: EpilationComponent
+      }
+    ]
+  },
+  {
+    path: 'soins_des_mains',
+    component: NavbarComponent,
+    children: [
       {
-        path: 'prestations',
-        component: PrestationComponent,
-        outlet: 'main'
-      },
-      {
-        path: 'moments',
-        component: MomentComponent,
-        outlet: 'main'
-      },
-      {
-        path: 'commentaires',
-        component: CommentaryComponent,
-        outlet: 'main'
+        path: '',
+        component: MainsComponent
       },
     ]
   },
   {
-    path: 'epilation',
-    component: EpilationComponent
-  },
-  {
-    path: 'soins_des_mains',
-    component: MainsComponent
-  },
-  {
     path: 'visage',
-    component: VisageComponent
+    component: NavbarComponent,
+    children: [
+      {
+        path: '',
+        component: VisageComponent
+      }
+    ]
   },
   {
-    path: 'commentaires',
-    component: CommentaryComponent,
+    path: 'corps',
+    component: NavbarComponent,
+    children: [
+      {
+        path: '',
+        component: CorpsComponent
+      }
+    ]
+  },
+  {
+    path: 'massage',
+    component: NavbarComponent,
+    children: [
+      {
+        path: '',
+        component: MassageComponent
+      }
+    ]
   },
   {
     path: 'avis',
@@ -69,7 +83,6 @@ export const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  declarations: [ScrollToTopDirective],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

@@ -10,6 +10,7 @@ import { CommentaryService } from '../../core/services/CommentaryService';
   templateUrl: './commentary.component.html',
   styleUrls: ['./commentary.component.css'],
 })
+
 export class CommentaryComponent implements OnInit {
 
   allComments: Commentary[] = [];
@@ -24,7 +25,6 @@ export class CommentaryComponent implements OnInit {
 
   ngOnInit(): void {
     this.loadComments();
-
     this.router.events.pipe(
       filter(event => event instanceof NavigationEnd)
     ).subscribe(() => {
@@ -33,7 +33,7 @@ export class CommentaryComponent implements OnInit {
         window.scrollTo(0, 0);
       }
     });
-  }
+  };
 
   loadComments(): void {
     this.commentaryService.getAllComments().subscribe(
@@ -46,15 +46,13 @@ export class CommentaryComponent implements OnInit {
       },
       (error: any) => {
         console.error('Error fetching comments:', error);
-      }
-    );
-  }
+      });
+  };
 
   showLimitedComments(): boolean {
     // Récupère l'URL actuelle
     const currentUrl = this.router.url;
-
     // Vérifie si l'URL est '/commentaires'
     return currentUrl !== '/commentaires';
-  }
+  };
 }

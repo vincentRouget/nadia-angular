@@ -1,0 +1,17 @@
+<div class="corps">
+    <h1 class="corps_title">Soins du dos et du corps</h1>
+    <div class="corps_container">
+        <div class="corps_visage">
+            <div *ngFor="let corps of corpsArray" class="ligne">
+                <div class="name_detail">
+                    <p class="name">{{ corps.name }} </p>
+                    <p class="detail">{{corps.detail}}</p>
+                </div>
+                <p class="hiddenDot">{{dot}}</p>
+                <div class="prix">
+                    <p>{{ corps.prix }} €</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
