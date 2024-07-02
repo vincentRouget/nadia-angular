@@ -18,6 +18,44 @@
   gap: 5vw;
 }
 
+.handleLeft {
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: opacity 0.8s ease-out, transform 0.4s ease-in;
+}
+
+.handle {
+  opacity: 0;
+  transition: opacity 1s ease-out;
+}
+
+.handleRight {
+  transform: translateX(100%);
+  opacity: 0;
+  transition: opacity 0.8s ease-out, transform 0.4s ease-in;
+}
+
+.translateLeft {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 0.8s ease-out, transform 0.4s ease-in;
+}
+
+.translateRight {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 0.8s ease-out, transform 0.4s ease-in;
+}
+
+.handle-in {
+  opacity: 1;
+}
+
+.handle-out {
+  opacity: 0;
+  transition: opacity 1s ease-in;
+}
+
 .photo {
   position: relative;
   display: flex;
@@ -25,7 +63,7 @@
   align-items: center;
   width: 500px;
   gap: 40px;
-  margin-bottom: 300px;
+  margin-bottom: 200px;
   overflow: hidden;
   cursor: pointer;
   transition: transform 1s ease-in, box-shadow 0.3s ease-in-out;

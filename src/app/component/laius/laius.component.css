@@ -6,6 +6,36 @@
   align-items: center;
   width: 100vw;
   height: 200vh;
+  overflow: hidden;
+}
+
+.translateLeft {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.translateRight {
+  opacity: 0;
+  transform: translateX(100%);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.slide-in {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.slide-outLeft {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: opacity 0.6s ease-in, transform 0.6s ease-in;
+}
+
+.slide-outRight {
+  opacity: 0;
+  transform: translateX(100%);
+  transition: opacity 0.6s ease-in, transform 0.6s ease-in;
 }
 
 .laius_title {

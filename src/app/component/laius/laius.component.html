@@ -1,13 +1,22 @@
 <div class="laius">
-    <div class="laius_title">
-        <h1>Notre philosophie de soins de la peau, révélez votre éclat naturel, jour après jour</h1>
+    <div class="laius_title" (window:scroll)="onScroll($event)">
+        <h1 [ngClass]="{'slide-in': laiusComeIn && !laiusComeOut, 'slide-outLeft': laiusComeOut}" class="translateLeft">Notre
+            philosophie
+            de soins de la peau, révélez
+            votre éclat naturel, jour après jour</h1>
     </div>
-    <div class="laius_pitch">
-        <h2>Chez nous, les soins de beauté transcendent la simple apparence.
+    <div class="laius_pitch" (window:scroll)="onScroll($event)">
+        <h2 [ngClass]="{'slide-in': laiusComeIn && !laiusComeOut, 'slide-outRight': laiusComeOut}" class="translateRight">Chez nous,
+            les
+            soins de beauté transcendent la simple apparence.
             Notre philosophie est de révéler votre éclat naturel, jour après jour.</h2>
-        <h2>Chaque peau étant unique, nos produits sont conçus avec des ingrédients naturels et innovants,
+        <h2 [ngClass]="{'slide-in': laiusComeIn && !laiusComeOut, 'slide-outRight': laiusComeOut}" class="translateRight">Chaque peau
+            étant
+            unique, nos produits sont conçus avec des ingrédients naturels et
+            innovants,
             respectueux de votre peau et de l'environnement.</h2>
-        <h2>Adoptez notre routine de soins pour un moment de bien-être et de régénération,
+        <h2 [ngClass]="{'slide-in': laiusComeIn && !laiusComeOut, 'slide-outRight': laiusComeOut}" class="translateRight">Adoptez notre
+            routine de soins pour un moment de bien-être et de régénération,
             et découvrez une peau radieuse, saine et éclatante, à chaque instant.</h2>
     </div>
 </div>

@@ -10,5 +10,7 @@ export class FooterComponent {
 
   map: string = '../../../assets/map.jpg';
   facebook: string = '../../../assets/facebook.png';
-  
+  charlotte: string = '../../../assets/charlotte.png';
+  acorelle: string = '../../../assets/acorelle.jpg';
+  hair: string = '../../../assets/hair.png';
 }
