@@ -15,15 +15,17 @@
     width: 100%;
     height: 100%;
     margin-top: 100px;
+    margin-bottom: 50px;
 }
 
 .topLeft {
     /* background-color: green; */
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     width: 100%;
+    height: 100%;
     margin: auto 50px auto 100px;
 }
 
@@ -36,14 +38,14 @@
     align-items: center;
     width: 100%;
     height: 15vh;
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
     border: 2px solid #b28c23;
 }
 
 .pitch {
     /* background-color: blue; */
     text-align: center;
-    font-size: 34px;
+    font-size: 30px;
     color: #b28c23;
     margin: 0;
     margin: auto 50px auto 50px;
@@ -74,7 +76,7 @@
 
 .reglement {
     color: #b28c23;
-    font-size: 30px;
+    font-size: 24px;
     margin: 0;
     padding-left: 20px;
     padding-right: 20px;
@@ -109,9 +111,8 @@
     /* background-color: blue; */
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    /* gap:1vh; */
     width: 100%;
     height: 100%;
     font-size: 24px;
@@ -120,10 +121,15 @@
 
 .rdv {
     /* background-color: yellow; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     color: #b28c23;
-    text-align: center;
-    font-size: 30px;
-    margin: 20px auto 20px auto;
+    font-size: 28px;
+    height: 50px;
+    margin: 0;
+    /* margin: 20px auto 20px auto; */
     text-decoration: underline;
 }
 
@@ -133,9 +139,16 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    margin: 0;
     line-height: 0;
-    height: 100%;
     color: #b28c23;
+}
+
+.phone_details {}
+
+.up {
+    margin-top: 1vh;
 }
 
 .mail {
@@ -144,14 +157,17 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100%;
+    margin: 0;
+    line-height: 0;
     color: #b28c23;
 }
 
-.button_mail {
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
+.mail_link {
+    /* background-color: red; */
+    margin: 0;
+    line-height: 0;
+    color: #54AE8A;
+
 }
 
 .social {
@@ -160,8 +176,8 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    margin: 0;
     line-height: 0;
-    height: 100%;
     color: #b28c23;
 }
 
@@ -205,6 +221,21 @@
 
 .gras {
     font-weight: bolder;
+}
+
+.notification {
+    background-color: #fbf7e9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border: 2px solid #b28c23;
+}
+
+.notification_details {
+    font-size: 20px;
+    color: #b28c23;
 }
 
 .topRight {

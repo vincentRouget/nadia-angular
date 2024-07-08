@@ -19,8 +19,9 @@
 .moment_title {
     width: 30vw;
     text-align: center;
-    font-size: 56px;
-    color: #F6F7EF;
+    font-size: 48px;
+    /* color: #F6F7EF; */
+    color: #e2aaae;
     text-shadow:
         -2px -2px 0 #000,
         2px -2px 0 #000,
