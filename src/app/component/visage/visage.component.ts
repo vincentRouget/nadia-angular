@@ -41,7 +41,7 @@ export class VisageComponent implements OnInit {
 
     //MODELAGE FACIAL JAPONAIS
     this.lifting = new Visage("JAPONAIS", "Lifting manuel du visage, 1H", "Huile adaptée. Stimule le teint, améliore la circulation, relaxant, réduit le vieillissement de la peau, lissant, repulpant", 50);
-    this.cure = new Visage("JAPONAIS", "Cure de 10 semaines du lifting", "1H pendant 6 semaines pour une plus grande efficacité", 465);
+    this.cure = new Visage("JAPONAIS", "Cure de 10 semaines du lifting", "6 séances de 1H, réparties sur la durée de la cure, pour une plus grande efficacité", 465);
 
     this.visageJaponais = [
       this.lifting,

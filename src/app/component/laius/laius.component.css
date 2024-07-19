@@ -5,8 +5,9 @@
   justify-content: space-around;
   align-items: center;
   width: 100vw;
-  height: 200vh;
+  height: 180vh;
   overflow: hidden;
+  font-family: var(--font-family-primary);
 }
 
 .translateLeft {
@@ -39,21 +40,19 @@
 }
 
 .laius_title {
-  /* background-color: red; */
   display: flex;
   text-align: center;
   width: 50%;
   margin: auto 100px auto 100px;
-  font-size: 32px;
-
+  font-size: 40px;
 }
 
 .laius_pitch {
-  /* background-color: blue; */
   display: flex;
   flex-direction: column;
   text-align: center;
+  gap:4vh;
   width: 50%;
-  margin: auto 100px auto 100px;
-  font-size: 24px;
+  margin: auto 60px auto 0px;
+  font-size: 28px;
 }

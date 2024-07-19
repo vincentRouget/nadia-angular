@@ -1,56 +1,50 @@
 /* Font imports if necessary */
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=League+Spartan&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Public+Sans&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Sorts+Mill+Goudy&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Finlandica&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,900;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Work+Sans:ital,wght@0,900;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
 
 :root {
-    --font-family-primary: 'League Spartan', sans-serif;
-    --font-family-secondary: 'Libre Baskerville', serif;
+    --font-family-primary: 'Dancing Script', cursive;
     --font-family-tertiary: 'Montserrat', sans-serif;
     --font-family-quaternary: 'PT Sans', sans-serif;
     --font-family-quinary: 'Finlandica', sans-serif;
-    --font-family-senary: 'EB Garamond', serif;
-    --font-family-septenary: 'Open Sans', sans-serif;
-    --font-family-octonary: 'Playfair Display', serif;
-    --font-family-nonary: 'Public Sans', sans-serif;
-    --font-family-denary: 'Roboto', sans-serif;
-    --font-family-undecenary: 'Sorts Mill Goudy', serif;
     --font-family-duodenary: 'Work Sans', sans-serif;
     --font-family-tertiodenary: 'Lora', serif;
-    --font-family-quattuordenary: 'Chivo', sans-serif;
+
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
 body {
-    font-family: var(--font-family-primary);
+    overflow-x: hidden;
+    overflow-y: auto;
+    scroll-behavior: smooth;
 }
 
 h1 {
-    font-family: var(--font-family-duodenary);
+    /* font-family: var(--font-family-duodenary); */
 }
 
 h2 {
-    font-family: var(--font-family-tertiodenary);
+    /* font-family: var(--font-family-tertiodenary); */
 }
 
 p {
-    font-family: var(--font-family-tertiary);
+    /* font-family: var(--font-family-tertiary); */
 }
 
 span {
-    font-family: var(--font-family-quaternary);
+    /* font-family: var(--font-family-quaternary); */
 }
 
 a {
-    font-family: var(--font-family-quinary);
+    /* font-family: var(--font-family-quinary); */
 }

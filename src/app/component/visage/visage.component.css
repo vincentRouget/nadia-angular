@@ -10,21 +10,22 @@
     justify-content: flex-start;
     align-items: center;
     color: #b28c23;
+    font-family: var(--font-family-quaternary);
 }
 
 .visage_title {
     background-color: #fbf7e9;
     text-align: center;
     font-size: 40px;
-    margin-top: 15vh;
-    margin-bottom: 8vh;
+    margin-top: 20vh;
+    margin-bottom: 10vh;
     padding: 10px 50px;
     border: 2px solid #b28c23;
     text-decoration: underline;
+    font-family: var(--font-family-duodenary);
 }
 
 .visage_container {
-    /* background-color: green; */
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -49,52 +50,46 @@
 
 .visage_liste {
     background-color: #fbf7e9;
-    /* background-color: blue; */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 10px 50px;
+    padding: 20px 50px;
     border: 2px solid #b28c23;
 }
 
 .ligne {
-    /* background-color: pink; */
     display: flex;
     width: 35vw;
     font-size: 30px;
+    margin-top: 20px;
     margin-bottom: 2vh;
+    line-height: 1;
 }
 
 .name {
-    /* background-color: yellow; */
     white-space: nowrap;
     margin: 0 5px 0 0;
 }
 
 .detail {
-    /* background-color: red; */
     font-size: 20px;
     margin: 0;
 }
 
 .name_detail {
-    /* background-color: violet; */
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* line-height: 0; */
+    line-height: 1.2;
 }
 
 .hiddenDot {
-    /* background-color: green; */
     width: 100%;
     overflow: hidden;
 }
 
-
 .prix {
-    /* background-color: grey; */
     white-space: nowrap;
     margin-left: 5px;
 }

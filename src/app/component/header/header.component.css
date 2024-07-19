@@ -2,13 +2,13 @@
     background-image: url('../../../assets/header.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    width: 100vw;
-    height: 120vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 10vh;
+    width: 100vw;
+    height: 120vh;
+    font-family: var(--font-family-primary);
 }
 
 @keyframes slideDownUp {
@@ -20,21 +20,18 @@
     25% {
         transform: translateY(0);
         opacity: 1;
-        /* easing effect for smooth slowdown */
-        animation-timing-function: ease-out;
+        animation-timing-function: ease;
     }
 
     50% {
         transform: translateY(0);
         opacity: 1;
-        /* keeping the title visible for 3 seconds */
     }
 
     75% {
         transform: translateY(100%);
         opacity: 0;
-        /* easing effect for smooth transition */
-        animation-timing-function: ease-in;
+        animation-timing-function: ease;
     }
 
     100% {
@@ -45,34 +42,40 @@
 
 .header_title_top,
 .header_title_bottom {
-    animation: slideDownUp 8s ease-in-out infinite;
+    animation: slideDownUp 6s ease-in-out infinite;
 }
 
 .header_title_top {
-    /* background-color: yellow; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    font-size: 56px;
-    /* color: #F6F7EF; */
-    color: #e2aaae;
+    width: 100%;
+    height: 150px;
+    font-size: 80px;
     text-shadow:
         -2px -2px 0 #000,
         2px -2px 0 #000,
         -2px 2px 0 #000,
         2px 2px 0 #000;
     font-weight: bold;
-    /* margin-top: 20vh; */
     margin: 0;
     line-height: 0;
-    margin-top: -20vh;
+    margin-top: -10vh;
+    margin-bottom: 5vh;
     animation-delay: 0s;
+    color: #e2aaae;
 }
 
 .header_title_bottom {
-    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    font-size: 48px;
-    /* color: #F6F7EF; */
-    color: #e2aaae;
+    width: 100%;
+    height: 150px;
+    text-align: center;
+    font-size: 64px;
     text-shadow:
         -2px -2px 0 #000,
         2px -2px 0 #000,
@@ -82,4 +85,5 @@
     margin: 0;
     line-height: 0;
     animation-delay: 0s;
+    color: #e2aaae;
 }

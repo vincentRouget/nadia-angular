@@ -5,7 +5,10 @@
             <div class="mains_liste">
                 <h1>Beauté des mains et des pieds</h1>
                 <div *ngFor="let mains of mainsBeaute" class="ligne">
-                    <p class="name">{{ mains.name }} </p>
+                    <div class="name_detail">
+                        <p class="name">{{ mains.name }} </p>
+                        <p class="detail">{{mains.detail}}</p>
+                    </div>
                     <p class="hiddenDot">{{dot}}</p>
                     <div class="prix">
                         <p>{{ mains.prix }} €</p>

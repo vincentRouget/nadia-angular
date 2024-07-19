@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 
 export class FooterComponent {
 
-  map: string = '../../../assets/map.jpg';
+  map: string = '../../../assets/map2.png';
   facebook: string = '../../../assets/facebook.png';
   charlotte: string = '../../../assets/charlotte.png';
   acorelle: string = '../../../assets/acorelle.jpg';

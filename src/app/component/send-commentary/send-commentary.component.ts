@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Commentary } from '../../features/models/commentary.model';
-import { CommentaryService } from '../../core/services/CommentaryService';
+import { CommentaryService } from '../../core/services/commentary.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -57,3 +57,6 @@ export class SendCommentaryComponent {
     }
   };
 }
+
+
+

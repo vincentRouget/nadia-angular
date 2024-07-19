@@ -15,7 +15,6 @@ export class MainsComponent implements OnInit {
   //BEAUTE DES MAINS ET DES PIEDS
   public manucure: Mains;
   public masque: Mains;
-  public reparateur: Mains;
   public massage: Mains;
   public pose: Mains;
 
@@ -30,23 +29,21 @@ export class MainsComponent implements OnInit {
 
   constructor() {
     //BEAUTE DES MAINS ET DES PIEDS
-    this.manucure = new Mains("BEAUTE", "Manucure ou pédicure", 25);
-    this.masque = new Mains("BEAUTE", "Masque mains ou pieds", 10);
-    this.reparateur = new Mains("BEAUTE", "Réparateur, hydratant", 0);
-    this.massage = new Mains("BEAUTE", "Massage mains / pieds", 10);
-    this.pose = new Mains("BEAUTE", "Pose de vernis", 8);
+    this.manucure = new Mains("BEAUTE", "Manucure ou pédicure", "", 25);
+    this.masque = new Mains("BEAUTE", "Masque mains ou pieds", "Réparateur et hydratant", 10);
+    this.massage = new Mains("BEAUTE", "Massage mains / pieds", "", 10);
+    this.pose = new Mains("BEAUTE", "Pose de vernis", "", 8);
 
     this.mainsBeaute = [
       this.manucure,
       this.masque,
-      this.reparateur,
       this.massage,
       this.pose];
 
     //SEMI PERMANENT
-    this.preparation = new Mains("SEMIPERMANENT", "Préparation de l'ongle", 10);
-    this.semi = new Mains("SEMIPERMANENT", "Pose du vernis semi permanent", 23);
-    this.depose = new Mains("SEMIPERMANENT", "Dépose", 10);
+    this.preparation = new Mains("SEMIPERMANENT", "Préparation de l'ongle", "", 10);
+    this.semi = new Mains("SEMIPERMANENT", "Pose du vernis semi permanent", "", 23);
+    this.depose = new Mains("SEMIPERMANENT", "Dépose", "", 10);
 
     this.mainsSemiPermanent = [
       this.preparation,

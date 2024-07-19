@@ -3,7 +3,7 @@ import { ActivatedRoute, Router, NavigationEnd } from '@angular/router';
 import { filter } from 'rxjs/operators';
 
 import { Commentary } from '../../features/models/commentary.model';
-import { CommentaryService } from '../../core/services/CommentaryService';
+import { CommentaryService } from '../../core/services/commentary.service';
 
 @Component({
   selector: 'app-commentary',
@@ -14,6 +14,7 @@ import { CommentaryService } from '../../core/services/CommentaryService';
 export class CommentaryComponent implements OnInit {
 
   allComments: Commentary[] = [];
+  isPage = true;
   isLimited: boolean = true;
   currentUrl: string = '';
 
@@ -47,6 +48,10 @@ export class CommentaryComponent implements OnInit {
       (error: any) => {
         console.error('Error fetching comments:', error);
       });
+  };
+
+  showCommentsPage(): boolean {
+    return this.allComments.length > 0;
   };
 
   showLimitedComments(): boolean {

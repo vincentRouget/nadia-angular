@@ -48,6 +48,7 @@
     white-space: nowrap;
     cursor: pointer;
     color: grey;
+    font-family: var(--font-family-quinary);
 }
 
 .navbar_link_focus {
@@ -60,12 +61,9 @@
     font-size: 24px;
     white-space: nowrap;
     cursor: pointer;
-    color: black
+    color: black;
+    font-family: var(--font-family-quinary);
 }
-
-.navbar_link_focus {}
-
-.navbar_button:hover {}
 
 .navbar_link:hover {
     text-decoration: underline;

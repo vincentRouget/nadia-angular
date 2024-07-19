@@ -1,4 +1,4 @@
-<div [ngClass]="showLimitedComments() ? 'commentary' : 'commentary_url'">
+<div *ngIf="showCommentsPage()" [ngClass]="showLimitedComments() ? 'commentary' : 'commentary_url'">
     <div class="commentary_title">
         <h1>Nos clients ont aimé</h1>
     </div>

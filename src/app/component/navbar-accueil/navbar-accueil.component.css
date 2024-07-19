@@ -37,9 +37,11 @@
     white-space: nowrap;
     cursor: pointer;
     color: grey;
+    font-family: var(--font-family-quinary);
 }
 
 .navbarAccueil_link:hover {
     text-decoration: underline;
     color: black;
+    font-family: var(--font-family-quinary);
 }
