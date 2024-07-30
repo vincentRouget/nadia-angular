@@ -12,6 +12,7 @@ import { MaquillageComponent } from './component/maquillage/maquillage.component
 import { CommentaryComponent } from './component/commentary/commentary.component';
 import { NavbarAccueilComponent } from './component/navbar-accueil/navbar-accueil.component';
 import { SendCommentaryComponent } from './component/send-commentary/send-commentary.component';
+import { MentionsComponent } from './component/mentions/mentions.component';
 
 const routes: Routes = [
   {
@@ -95,6 +96,16 @@ const routes: Routes = [
       {
         path: '',
         component: SendCommentaryComponent
+      }
+    ]
+  },
+  {
+    path: 'privacy',
+    component: NavbarAccueilComponent,
+    children: [
+      {
+        path: '',
+        component: MentionsComponent
       }
     ]
   },

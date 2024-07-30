@@ -26,27 +26,75 @@
 }
 
 .massage_container {
-    background-color: #fbf7e9;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 50px 50px 0px 50px;
-    border: 2px solid #b28c23;
-}
-
-.ligne {
+    /* background-color: yellow; */
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    width: 90vw;
+}
+
+.massage_indien {
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.massage_suedois {
+    /* background-color: blue; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.massage_liste {
+    background-color: #fbf7e9;
+    /* background-color: grey; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 40vw;
+    padding: 20px 50px;
+    border: 2px solid #b28c23;
+}
+
+.section {
+    margin-bottom: 20px;
+}
+
+.description {
+    /* background-color: pink; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.ligne {
+    /* background-color: green; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
     font-size: 30px;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 
 .name {
     margin: 0 5px 0 0;
+}
+
+.nowrap {
+    white-space: nowrap;
 }
 
 .detail {
@@ -55,18 +103,27 @@
 }
 
 .name_detail {
+    /* background-color: blueviolet; */
     display: flex;
     flex-direction: column;
     justify-content: center;
+    max-width: 30vw;
+}
+
+.dot {
+    /* background-color: red; */
+    margin: 0 5px;
+    width: 50%;
+    overflow: hidden;
 }
 
 .hiddenDot {
-    width: 50%;
     height: 100%;
     overflow: hidden;
 }
 
 .prix {
+    /* background-color: blue; */
     white-space: nowrap;
-    margin-left: 5px;
+    width: auto;
 }

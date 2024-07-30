@@ -1,15 +1,48 @@
 <div class="massage">
-    <h1 class="massage_title">Modelages Ayurvédiques (massage indien)</h1>
+    <h1 class="massage_title">Modelage ayurvédique et suédois</h1>
     <div class="massage_container">
-        <div class="massage_visage">
-            <div *ngFor="let massage of massageArray" class="ligne">
-                <div class="name_detail">
-                    <p class="name">{{ massage.name }} </p>
-                    <p class="detail">{{massage.detail}}</p>
+        <div class="massage_indien">
+            <div class="massage_liste">
+                <h1 class="section">Massage indien (ayurvédique)</h1>
+                <div *ngFor="let massage of massageArray" class="ligne">
+                    <div class="name_detail">
+                        <p class="name">{{ massage.name }} </p>
+                        <p class="detail">{{massage.detail}}</p>
+                    </div>
+                    <div class="dot">
+                        <p class="hiddenDot">{{dot}}</p>
+                    </div>
+                    <div class="prix">
+                        <p>{{ massage.prix }} €</p>
+                    </div>
                 </div>
-                <p class="hiddenDot">{{dot}}</p>
-                <div class="prix">
-                    <p>{{ massage.prix }} €</p>
+            </div>
+        </div>
+        <div class="massage_suedois">
+            <div class="massage_liste">
+                <h1 class="section">Massage suédois</h1>
+                <div class="description">
+                    <p class="detail">Ce massage consiste en un enchaînement de manœuvres appliquées sur la masse
+                        musculaire
+                        et les
+                        articulations.</p>
+                    <p class="detail">Relaxation générale,
+                        amélioration de la circulation sanguine et lymphatique,
+                        élimination des toxines et des déchets,
+                        diminution des tensions musculaire,
+                        apaise les terminaisons des nerfs et calme les tensions émotionnelles.</p>
+                </div>
+                <div *ngFor="let massage of massageSuedoisArray" class="ligne">
+                    <div class="name_detail">
+                        <p class="name nowrap">{{ massage.name }} </p>
+                        <p class="detail">{{massage.detail}}</p>
+                    </div>
+                    <div class="dot">
+                        <p class="hiddenDot">{{dot}}</p>
+                    </div>
+                    <div class="prix">
+                        <p>{{ massage.prix }} €</p>
+                    </div>
                 </div>
             </div>
         </div>

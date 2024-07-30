@@ -22,6 +22,7 @@ import { NavbarAccueilComponent } from './component/navbar-accueil/navbar-accuei
 import { SendCommentaryComponent } from './component/send-commentary/send-commentary.component';
 import { FooterComponent } from './component/footer/footer.component';
 import { MomentComponent } from './component/moment/moment.component';
+import { MentionsComponent } from './component/mentions/mentions.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { MomentComponent } from './component/moment/moment.component';
     NavbarAccueilComponent,
     SendCommentaryComponent,
     FooterComponent,
+    MentionsComponent,
   ],
   imports: [
     BrowserModule,
