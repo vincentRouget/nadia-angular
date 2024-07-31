@@ -43,7 +43,7 @@
   display: flex;
   text-align: center;
   width: 50%;
-  margin: auto 100px auto 100px;
+  margin: auto 5vw auto 5vw;
   font-size: 40px;
 }
 
@@ -51,8 +51,71 @@
   display: flex;
   flex-direction: column;
   text-align: center;
-  gap:4vh;
+  gap: 4vh;
   width: 50%;
-  margin: auto 60px auto 0px;
+  margin: auto 4vw auto 0px;
   font-size: 28px;
+}
+
+@media (max-width: 1440px) {
+  .laius_title {
+    margin: auto 4vw auto 4vw;
+    font-size: 32px;
+  }
+
+  .laius_pitch {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .laius_title {
+    font-size: 24px;
+  }
+
+  .laius_pitch {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .laius_title {
+    font-size: 24px;
+  }
+
+  .laius_pitch {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .laius {
+    height: 250vh;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10vh;
+    padding:10vh auto 10vh auto;
+  }
+
+  .translateLeft,
+  .translateRight,
+  .slide-in,
+  .slide-outLeft,
+  .slide-outRight {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .laius_title {
+    width: 90%;
+    margin: 0;
+    font-size: 24px;
+  }
+
+  .laius_pitch {
+    width: 90%;
+    margin: 0;
+    font-size: 20px;
+  }
 }

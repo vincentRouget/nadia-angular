@@ -62,3 +62,26 @@
   transition: transform 0.4s ease-in-out;
   font-family: var(--font-family-tertiodenary);
 }
+
+@media (max-width: 768px) {
+  .photo {
+    width: 400px;
+    height: 700px;
+    margin-bottom: 150px;
+  }
+
+  .soinTitle {
+    width: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .photo {
+    width: 80vw;
+    height: 80vh;
+  }
+
+  .soinTitle {
+    font-size: 32px;
+  }
+}

@@ -35,3 +35,36 @@
     margin-top: 2vh;
     margin-right: 2vw;
 }
+
+@media (max-width: 1440px) {
+    .moment_image {
+        align-items: center;
+    }
+
+    .moment_title {
+        width: auto;
+        font-size: 64px;
+        margin: 0;
+        margin-top: 10vh;
+    }
+}
+
+@media (max-width: 1024px) {
+    .moment_title {
+        font-size: 56px;
+    }
+}
+
+@media (max-width: 768px) {
+    .moment_title {
+        font-size: 48px;
+    }
+}
+
+@media (max-width: 480px) {
+    .moment_title {
+        font-size: 40px;
+        padding: 0px 5vw;
+        margin-top: 4vh;
+    }
+}
