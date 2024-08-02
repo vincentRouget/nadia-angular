@@ -54,18 +54,20 @@
 
 .massage_liste {
     background-color: #fbf7e9;
-    /* background-color: grey; */
+    background-color: grey;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 40vw;
-    padding: 20px 50px;
+    padding: 20px 30px;
     border: 2px solid #b28c23;
+    margin-bottom: 10vh;
 }
 
 .section {
     margin-bottom: 20px;
+    text-align: center;
 }
 
 .description {
@@ -90,7 +92,7 @@
 }
 
 .name {
-    margin: 0 5px 0 0;
+    /* margin: 0 5px 0 0; */
 }
 
 .nowrap {
@@ -103,17 +105,17 @@
 }
 
 .name_detail {
-    /* background-color: blueviolet; */
+    background-color: blueviolet;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    max-width: 30vw;
+    /* max-width: 30vw; */
 }
 
 .dot {
-    /* background-color: red; */
+    background-color: red;
     margin: 0 5px;
-    width: 50%;
+    width: 100%;
     overflow: hidden;
 }
 
@@ -123,7 +125,80 @@
 }
 
 .prix {
-    /* background-color: blue; */
+    background-color: blue;
     white-space: nowrap;
     width: auto;
+}
+
+@media (max-width: 1440px) {
+    .massage_title {
+        background-color: yellow;
+    }
+
+    .massage_container {
+        flex-direction: column;
+    }
+
+    .massage_liste {
+        width: 80%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .massage_title {
+        background-color: red;
+        font-size: 32px;
+        padding: 10px 30px;
+    }
+
+    .massage_liste {
+        width: 90%;
+    }
+
+    .section {
+        font-size: 32px;
+    }
+
+    .name {
+        font-size: 24px;
+    }
+
+    .prix {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 768px) {
+    .massage_title {
+        background-color: blue;
+        width: 80vw;
+        /* padding: 0; */
+    }
+
+    .massage_liste {
+        width: 95%;
+        padding: 20px 30px;
+    }
+
+    .dot {
+        width: 40%;
+    }
+}
+
+@media (max-width: 480px) {
+    .massage_title {
+        background-color: green;
+    }
+
+    .ligne {
+        flex-direction: column;
+    }
+
+    .name_detail {
+        margin-bottom: 1vh;
+    }
+
+    .hiddenDot {
+        display: none;
+    }
 }

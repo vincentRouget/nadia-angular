@@ -6,7 +6,9 @@
                 <h1>VISAGE</h1>
                 <div *ngFor="let epilation of epilationVisage" class="ligne">
                     <p class="name">{{ epilation.name }} </p>
-                    <p class="hiddenDot">{{dot}}</p>
+                    <div class="dot">
+                        <p class="hiddenDot">{{dot}}</p>
+                    </div>
                     <div class="prix">
                         <p>{{ epilation.prix }} €</p>
                     </div>
@@ -18,7 +20,9 @@
                 <h1>MAILLOT</h1>
                 <div *ngFor="let epilation of epilationMaillot" class="ligne">
                     <p class="name">{{ epilation.name }} </p>
-                    <p class="hiddenDot">{{dot}}</p>
+                    <div class="dot">
+                        <p class="hiddenDot">{{dot}}</p>
+                    </div>
                     <div class="prix">
                         <p>{{ epilation.prix }} €</p>
                     </div>
@@ -30,7 +34,9 @@
                 <h1>CORPS</h1>
                 <div *ngFor="let epilation of epilationCorps" class="ligne">
                     <p class="name">{{ epilation.name }} </p>
-                    <p class="hiddenDot">{{dot}}</p>
+                    <div class="dot">
+                        <p class="hiddenDot">{{dot}}</p>
+                    </div>
                     <div class="prix">
                         <p>{{ epilation.prix }} €</p>
                     </div>

@@ -9,7 +9,9 @@
                         <p class="name">{{ mains.name }} </p>
                         <p class="detail">{{mains.detail}}</p>
                     </div>
-                    <p class="hiddenDot">{{dot}}</p>
+                    <div class="dot">
+                        <p class="hiddenDot">{{dot}}</p>
+                    </div>
                     <div class="prix">
                         <p>{{ mains.prix }} €</p>
                     </div>
@@ -21,7 +23,9 @@
                 <h1>Semi Permanent</h1>
                 <div *ngFor="let mains of mainsSemiPermanent" class="ligne">
                     <p class="name">{{ mains.name }} </p>
-                    <p class="hiddenDot">{{dot}}</p>
+                    <div class="dot">
+                        <p class="hiddenDot">{{dot}}</p>
+                    </div>
                     <div class="prix">
                         <p>{{ mains.prix }} €</p>
                     </div>
