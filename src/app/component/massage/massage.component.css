@@ -26,7 +26,6 @@
 }
 
 .massage_container {
-    /* background-color: yellow; */
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -35,7 +34,6 @@
 }
 
 .massage_indien {
-    /* background-color: red; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -44,7 +42,6 @@
 }
 
 .massage_suedois {
-    /* background-color: blue; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -54,7 +51,6 @@
 
 .massage_liste {
     background-color: #fbf7e9;
-    background-color: grey;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -71,7 +67,6 @@
 }
 
 .description {
-    /* background-color: pink; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -81,7 +76,6 @@
 }
 
 .ligne {
-    /* background-color: green; */
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -89,10 +83,6 @@
     width: 100%;
     font-size: 30px;
     margin-bottom: 30px;
-}
-
-.name {
-    /* margin: 0 5px 0 0; */
 }
 
 .nowrap {
@@ -105,15 +95,12 @@
 }
 
 .name_detail {
-    background-color: blueviolet;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* max-width: 30vw; */
 }
 
 .dot {
-    background-color: red;
     margin: 0 5px;
     width: 100%;
     overflow: hidden;
@@ -125,16 +112,11 @@
 }
 
 .prix {
-    background-color: blue;
     white-space: nowrap;
     width: auto;
 }
 
 @media (max-width: 1440px) {
-    .massage_title {
-        background-color: yellow;
-    }
-
     .massage_container {
         flex-direction: column;
     }
@@ -146,7 +128,6 @@
 
 @media (max-width: 1024px) {
     .massage_title {
-        background-color: red;
         font-size: 32px;
         padding: 10px 30px;
     }
@@ -170,9 +151,7 @@
 
 @media (max-width: 768px) {
     .massage_title {
-        background-color: blue;
         width: 80vw;
-        /* padding: 0; */
     }
 
     .massage_liste {
@@ -186,15 +165,17 @@
 }
 
 @media (max-width: 480px) {
-    .massage_title {
-        background-color: green;
-    }
-
     .ligne {
         flex-direction: column;
     }
 
+    .name {
+        white-space: wrap;
+        text-align: center;
+    }
+
     .name_detail {
+        text-align: center;
         margin-bottom: 1vh;
     }
 

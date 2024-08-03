@@ -48,4 +48,11 @@ export class NavbarComponent implements OnInit {
     const currentUrl = this.router.url;
     return currentUrl !== '/maquillage';
   };
+
+  toggleMenu(): void {
+    const navbarLinks = document.querySelector('.navbar_links');
+    if (navbarLinks) {
+      navbarLinks.classList.toggle('show');
+    }
+  };
 }

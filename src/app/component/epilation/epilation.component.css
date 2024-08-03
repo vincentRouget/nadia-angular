@@ -57,7 +57,6 @@
 
 .epilation_liste {
   background-color: #fbf7e9;
-  background-color: grey;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -80,14 +79,11 @@
 }
 
 .name {
-  background-color: blueviolet;
-  /* white-space: nowrap; */
   width: 100%;
   margin-right: 5px;
 }
 
 .dot {
-  background-color: red;
   margin: 0 5px;
   width: 100%;
   overflow: hidden;
@@ -99,44 +95,69 @@
 }
 
 .prix {
-  background-color: blue;
   white-space: nowrap;
   margin-left: 5px;
 }
 
 @media (max-width: 1440px) {
   .epilation_title {
-    background-color: yellow;
     font-size: 32px;
   }
 
   .name {
     font-size: 24px;
   }
+
   .prix {
     font-size: 24px;
   }
 }
 
 @media (max-width: 1024px) {
-  .epilation_title {
-    background-color: red;
-  }  .name {
+  .name {
     font-size: 20px;
   }
+
   .prix {
     font-size: 20px;
   }
 }
 
-@media (max-width: 768px) {
-  .epilation_title {
-    background-color: blue;
-  }
-}
+@media (max-width: 768px) {}
 
 @media (max-width: 480px) {
   .epilation_title {
-    background-color: green;
+    font-size: 24px;
+    padding: 10px 10px;
+    margin-left: 5vw;
+    margin-right: 5vw;
+  }
+
+  .epilation_container {
+    width: 100%;
+  }
+
+  .epilation_liste {
+    width: 90vw;
+    min-width: 100px;
+  }
+
+  .ligne {
+    flex-direction: column;
+  }
+
+  .name {
+    white-space: wrap;
+    text-align: center;
+    margin-bottom: 1vh;
+  }
+
+  .hiddenDot {
+    display: none;
+  }
+
+  .prix {
+    text-align: center;
+    margin-bottom: 3vh;
   }
 }

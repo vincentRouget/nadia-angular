@@ -29,9 +29,11 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around;
-  width: 90vw;
-  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 5vw;
+  margin-bottom: 10vh;
 }
 
 .maquillage_visage {
@@ -54,7 +56,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 20px 50px;
+  width: 100%;
+  padding: 10px 30px;
   border: 2px solid #b28c23;
 }
 
@@ -62,7 +65,8 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 30vw;
+  width: 100%;
+  max-width: 600px;
   margin-top: 20px;
   line-height: 2;
   font-size: 30px;
@@ -73,12 +77,127 @@
   margin-right: 5px;
 }
 
-.hiddenDot {
+.dot {
+  margin: 0 5px;
   width: 100%;
+  overflow: hidden;
+}
+
+.hiddenDot {
+  height: 100%;
   overflow: hidden;
 }
 
 .prix {
   white-space: nowrap;
   margin-left: 5px;
+}
+
+@media (max-width: 1440px) {
+  .maquillage_container {
+    flex-direction: column;
+  }
+
+  .maquillage_liste {
+    width: 65vw;
+    max-width: 50vw;
+  }
+
+  .name_detail {
+    width: 100%;
+  }
+
+  .name {
+    font-size: 24px;
+  }
+
+  .detail {
+    font-size: 16px;
+  }
+
+  .prix {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .maquillage_title {
+    font-size: 32px;
+    padding: 10px 30px;
+  }
+
+  .maquillage_liste {
+    max-width: 70vw;
+  }
+
+  .section {
+    font-size: 32px;
+  }
+
+  .name {
+    font-size: 24px;
+  }
+
+  .prix {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .maquillage_title {
+    font-size: 28px;
+  }
+
+  .maquillage_liste {
+    width: 100%;
+    max-width: 90vw;
+  }
+
+  .ligne {
+    width: 100%;
+  }
+
+  .name {
+    font-size: 20px;
+  }
+
+  .prix {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .maquillage_title {
+    font-size: 24px;
+    padding: 10px 10px;
+    margin-left: 5vw;
+    margin-right: 5vw;
+  }
+
+  .maquillage_liste {
+    width: 80vw;
+  }
+
+  .ligne {
+    flex-direction: column;
+  }
+
+  .name_detail {
+    text-align: center;
+    margin-bottom: 1vh;
+  }
+
+  .name {
+    white-space: wrap;
+    text-align: center;
+  }
+
+  .hiddenDot {
+    display: none;
+  }
+
+  .prix {
+    text-align: center;
+    margin-bottom: 3vh;
+  }
 }

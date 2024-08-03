@@ -16,41 +16,45 @@
     align-items: center;
     width: 100%;
     height: 100%;
+    position: relative;
 }
 
-.navbar_button {
+.navbar_links {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.burger_menu {
+    display: none;
+    font-size: 40px;
+    cursor: pointer;
+    position: absolute;
+    right: 30px;
+    top: 16px;
+}
+
+.navbar_button,
+.navbar_button_focus {
     background-color: #fbf7e9;
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     width: 100%;
     height: 100%;
+    margin-left: 1vw;
+    margin-right: 1vw;
 }
 
 .navbar_button_focus {
     background-color: #f7e9fb;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
     color: black;
 }
 
-.navbar_link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    text-decoration: none;
-    font-size: 24px;
-    white-space: nowrap;
-    cursor: pointer;
-    color: grey;
-    font-family: var(--font-family-quinary);
-}
-
+.navbar_link,
 .navbar_link_focus {
     display: flex;
     justify-content: center;
@@ -61,8 +65,13 @@
     font-size: 24px;
     white-space: nowrap;
     cursor: pointer;
-    color: black;
+    color: grey;
+    padding: 10px;
     font-family: var(--font-family-quinary);
+}
+
+.navbar_link_focus {
+    color: black;
 }
 
 .navbar_link:hover {
@@ -71,6 +80,10 @@
 }
 
 @media (max-width: 1440px) {
+    .navbar_links {
+        width: 100%;
+    }
+
     .navbar_link {
         font-size: 20px;
     }
@@ -80,32 +93,46 @@
     }
 
     @media (max-width: 1024px) {
-        .navbar_link {
-            font-size: 16px;
-        }
-
+        .navbar_link,
         .navbar_link_focus {
+            white-space: wrap;
             font-size: 16px;
         }
     }
+}
 
-    @media (max-width: 768px) {
-        .navbar_link {
-            font-size: 16px;
-        }
-
-        .navbar_link_focus {
-            font-size: 16px;
-        }
+@media (max-width: 768px) {
+    .navbar_links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #fbf7e9;
+        position: absolute;
+        top: 10vh;
+        left: 0;
     }
 
-    @media (max-width: 480px) {
-        .navbar_link {
-            font-size: 20px;
-        }
+    .navbar_links.show {
+        display: flex;
+    }
 
-        .navbar_link_focus {
-            font-size: 20px;
-        }
+    .navbar_button {
+        background-color: #fbf7e9;
+        width: 100%;
+    }
+
+    .navbar_button_focus {
+        background-color: #f7e9fb;
+        width: 100%;
+    }
+
+    .burger_menu {
+        display: block;
+    }
+
+    .navbar_link,
+    .navbar_link_focus {
+        font-size: 20px;
+        height: 50px;
     }
 }

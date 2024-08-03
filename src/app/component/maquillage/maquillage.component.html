@@ -6,7 +6,9 @@
                 <h1>MAQUILLAGE</h1>
                 <div *ngFor="let maquillage of maquillageArray" class="ligne">
                     <p class="name">{{ maquillage.name }} </p>
-                    <p class="hiddenDot">{{dot}}</p>
+                    <div class="dot">
+                        <p class="hiddenDot">{{dot}}</p>
+                    </div>
                     <div class="prix">
                         <p>{{ maquillage.prix }} €</p>
                     </div>
@@ -18,7 +20,9 @@
                 <h1>COLORATION</h1>
                 <div *ngFor="let maquillage of colorationArray" class="ligne">
                     <p class="name">{{ maquillage.name }} </p>
-                    <p class="hiddenDot">{{dot}}</p>
+                    <div class="dot">
+                        <p class="hiddenDot">{{dot}}</p>
+                    </div>
                     <div class="prix">
                         <p>{{ maquillage.prix }} €</p>
                     </div>

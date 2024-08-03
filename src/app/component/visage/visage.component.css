@@ -54,17 +54,22 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 20px 50px;
+    padding: 10px 30px;
     border: 2px solid #b28c23;
+    margin-bottom: 10vh;
+}
+
+h1 {
+    text-align: center;
 }
 
 .ligne {
     display: flex;
-    width: 35vw;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 35vw;
     font-size: 30px;
-    margin-top: 20px;
-    margin-bottom: 2vh;
-    line-height: 1;
+    margin: 2vh 1vw;
 }
 
 .name {
@@ -84,12 +89,124 @@
     line-height: 1.2;
 }
 
-.hiddenDot {
+.dot {
+    margin: 0 5px;
     width: 100%;
+    overflow: hidden;
+}
+
+.hiddenDot {
+    height: 100%;
     overflow: hidden;
 }
 
 .prix {
     white-space: nowrap;
-    margin-left: 5px;
+}
+
+@media (max-width: 1440px) {
+    .visage_container {
+        flex-direction: column;
+    }
+
+    .visage_liste {
+        width: 60vw;
+    }
+
+    .ligne {
+        max-width: 50vw;
+    }
+
+    .name_detail {
+        width: 100%;
+    }
+
+    .name {
+        font-size: 24px;
+    }
+
+    .detail {
+        font-size: 16px;
+    }
+
+    .prix {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .visage_title {
+        font-size: 32px;
+        padding: 10px 30px;
+    }
+
+    .visage_liste {
+        width: 60vw;
+    }
+
+    .section {
+        font-size: 32px;
+    }
+
+    .name {
+        font-size: 24px;
+    }
+
+    .prix {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 768px) {
+    .visage_title {
+        font-size: 28px;
+    }
+
+    .visage_liste {
+        width: 85vw;
+    }
+
+    .ligne {
+        max-width: 75vw;
+    }
+
+    .name {
+        font-size: 20px;
+    }
+
+    .prix {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .visage_title {
+        font-size: 24px;
+        padding: 10px 10px;
+        margin-left: 5vw;
+        margin-right: 5vw;
+    }
+
+    .ligne {
+        flex-direction: column;
+    }
+
+    .name_detail {
+        text-align: center;
+        margin-bottom: 1vh;
+    }
+
+    .name {
+        white-space: initial;
+        text-align: center;
+    }
+
+    .hiddenDot {
+        display: none;
+    }
+
+    .prix {
+        text-align: center;
+        margin-bottom: 3vh;
+    }
 }
