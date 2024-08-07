@@ -18,21 +18,22 @@
         opacity: 0;
     }
 
-    25% {
+    20% {
         transform: translateY(0);
         opacity: 1;
-        animation-timing-function: ease;
+        animation-timing-function: ease-in;
     }
 
     50% {
         transform: translateY(0);
         opacity: 1;
+        animation-timing-function: linear;
     }
 
-    75% {
-        transform: translateY(100%);
-        opacity: 0;
-        animation-timing-function: ease;
+    80% {
+        transform: translateY(0);
+        opacity: 1;
+        animation-timing-function: ease-out;
     }
 
     100% {
@@ -43,7 +44,7 @@
 
 .header_title_top,
 .header_title_bottom {
-    animation: slideDownUp 6s ease-in-out infinite;
+    animation: slideDownUp 8s ease-in-out infinite;
 }
 
 .header_title_top {

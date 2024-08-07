@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import { Meta, Title } from '@angular/platform-browser';
 import { Corps } from '../../features/models/corps.model';
 
 @Component({
   selector: 'app-corps',
   templateUrl: './corps.component.html',
-  styleUrl: './corps.component.css'
+  styleUrls: ['./corps.component.css']
 })
 
 export class CorpsComponent implements OnInit {
@@ -18,7 +19,7 @@ export class CorpsComponent implements OnInit {
 
   public corpsArray: Corps[] = [];
 
-  constructor() {
+  constructor(private meta: Meta, private title: Title) {
     this.pureté = new Corps("Soins pureté, 30 min", "Nettoyage, gommage, vapeur, comédons, masque", 40);
     this.cou = new Corps("Modelage cou et dos, 30 min", "", 30);
     this.corps20 = new Corps("Modelage corps, 20 min", "", 20);
@@ -29,10 +30,18 @@ export class CorpsComponent implements OnInit {
       this.cou,
       this.corps20,
       this.corps40
-    ]
-  };
+    ];
+  }
 
   ngOnInit(): void {
+    // Définir les métadonnées
+    this.title.setTitle('Soins du Corps - Relaxation et Bien-être');
+    this.meta.addTags([
+      { name: 'description', content: 'Découvrez nos soins du corps pour une relaxation complète : soins pureté, modelage du cou et dos, et modelage du corps.' },
+      { name: 'keywords', content: 'soins du corps, relaxation, bien-être, modelage, pureté' }
+    ]);
+
+    // Faire défiler vers le haut de la page
     setTimeout(() => {
       try {
         window.scroll(0, 0);

@@ -1,11 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { Meta, Title } from '@angular/platform-browser';
 import { Mains } from '../../features/models/mains.model';
 
 @Component({
   selector: 'app-mains',
   templateUrl: './mains.component.html',
-  styleUrls: ['./mains.component.css'],
+  styleUrls: ['./mains.component.css']
 })
 
 export class MainsComponent implements OnInit {
@@ -27,7 +28,7 @@ export class MainsComponent implements OnInit {
 
   public mainsSemiPermanent: Mains[] = [];
 
-  constructor() {
+  constructor(private meta: Meta, private title: Title) {
     //BEAUTE DES MAINS ET DES PIEDS
     this.manucure = new Mains("BEAUTE", "Manucure ou pédicure", "", 25);
     this.masque = new Mains("BEAUTE", "Masque mains ou pieds", "Réparateur et hydratant", 10);
@@ -53,6 +54,14 @@ export class MainsComponent implements OnInit {
   };
 
   ngOnInit(): void {
+    // Définir les métadonnées
+    this.title.setTitle('Services de Beauté pour les Mains et les Pieds');
+    this.meta.addTags([
+      { name: 'description', content: 'Découvrez nos services de manucure, pédicure, et pose de vernis semi permanent pour des mains et des pieds parfaits.' },
+      { name: 'keywords', content: 'manucure, pédicure, vernis semi permanent, soins des mains, soins des pieds, beauté' }
+    ]);
+
+    // Faire défiler vers le haut de la page
     setTimeout(() => {
       try {
         window.scroll(0, 0);

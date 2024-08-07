@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Meta, Title } from '@angular/platform-browser';
 import { Epilation } from '../../features/models/epilation.model';
 
 @Component({
@@ -38,7 +39,7 @@ export class EpilationComponent implements OnInit {
 
   public epilationCorps: Epilation[] = [];
 
-  constructor() {
+  constructor(private meta: Meta, private title: Title) {
     //VISAGE
     this.dessinDesSourcils = new Epilation("VISAGE", "Dessin des sourcils", 15);
     this.sourcils = new Epilation("VISAGE", "Sourcils", 8);
@@ -85,6 +86,14 @@ export class EpilationComponent implements OnInit {
   };
 
   ngOnInit(): void {
+    // Définir les métadonnées
+    this.title.setTitle('Epilation - Services de qualité pour tous vos besoins');
+    this.meta.addTags([
+      { name: 'description', content: 'Découvrez nos services d\'épilation pour le visage, le maillot et le corps. Des soins de qualité adaptés à vos besoins.' },
+      { name: 'keywords', content: 'épilation, soins du visage, soins du corps, épilation maillot, relaxation, bien-être' }
+    ]);
+
+    // Faire défiler vers le haut de la page
     setTimeout(() => {
       try {
         window.scroll(0, 0);

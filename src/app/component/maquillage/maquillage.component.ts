@@ -1,33 +1,32 @@
 import { Component, OnInit } from '@angular/core';
+import { Meta, Title } from '@angular/platform-browser';
 import { Maquillage } from '../../features/models/maquillage.model';
 
 @Component({
   selector: 'app-maquillage',
   templateUrl: './maquillage.component.html',
-  styleUrl: './maquillage.component.css'
+  styleUrls: ['./maquillage.component.css']
 })
 
 export class MaquillageComponent implements OnInit {
 
   public dot: string = '.'.repeat(500);
 
-
-  //MAQUILLAGE
+  // MAQUILLAGE
   public jour: Maquillage;
   public occasion: Maquillage;
   public mariee: Maquillage;
 
   public maquillageArray: Maquillage[] = [];
 
-  //COLORATIONS
+  // COLORATIONS
   public sourcils: Maquillage;
   public cils: Maquillage;
 
   public colorationArray: Maquillage[] = [];
 
-  constructor() {
-
-    //MAQUILLAGE
+  constructor(private meta: Meta, private title: Title) {
+    // MAQUILLAGE
     this.jour = new Maquillage("MAQUILLAGE", "Maquillage de jour", 15);
     this.occasion = new Maquillage("MAQUILLAGE", "Maquillage occasion particulière", 25);
     this.mariee = new Maquillage("MAQUILLAGE", "Maquillage mariée", 30);
@@ -38,17 +37,25 @@ export class MaquillageComponent implements OnInit {
       this.mariee
     ];
 
-    //COLORATIONS
+    // COLORATIONS
     this.sourcils = new Maquillage("COLORATION", "Sourcils", 10);
     this.cils = new Maquillage("COLORATION", "Cils", 10);
 
     this.colorationArray = [
       this.sourcils,
       this.cils
-    ]
-  };
+    ];
+  }
 
   ngOnInit(): void {
+    // Définir les métadonnées
+    this.title.setTitle('Maquillage - Votre beauté, notre priorité');
+    this.meta.addTags([
+      { name: 'description', content: 'Découvrez nos services de maquillage pour toutes les occasions : jour, mariée, et événements spéciaux.' },
+      { name: 'keywords', content: 'maquillage, beauté, jour, mariée, événements spéciaux' }
+    ]);
+
+    // Faire défiler vers le haut de la page
     setTimeout(() => {
       try {
         window.scroll(0, 0);

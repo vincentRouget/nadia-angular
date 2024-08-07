@@ -1,12 +1,12 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
+import { Title, Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-prestation',
   templateUrl: './prestation.component.html',
-  styleUrl: './prestation.component.css',
+  styleUrls: ['./prestation.component.css']
 })
-
-export class PrestationComponent {
+export class PrestationComponent implements OnInit {
 
   epilation: string = '../../../assets/epilation.jpg';
   mains: string = '../../../assets/mains.jpg';
@@ -27,12 +27,23 @@ export class PrestationComponent {
   private scrollHeightSecondlinetBegin = 3600;
   private scrollHeightSecondLineFinish = 5000;
 
+  constructor(private titleService: Title, private metaService: Meta) { }
+
+  ngOnInit(): void {
+    // Set SEO title and meta tags
+    this.titleService.setTitle('Prestations de Beauté - Épilation, Soins des Mains, Visage, Corps, Massage, Maquillage');
+    this.metaService.addTags([
+      { name: 'description', content: 'Découvrez nos prestations de beauté incluant l’épilation, les soins des mains, du visage, du corps, les massages et le maquillage. Profitez d’une expérience personnalisée pour révéler votre beauté naturelle.' },
+      { name: 'keywords', content: 'épilation, soins des mains, soins du visage, soins du corps, massage, maquillage, prestations de beauté' }
+    ]);
+  }
+
   @HostListener('window:scroll', ['$event'])
   onScroll(event: Event): void {
     const scrollY = window.scrollY || document.documentElement.scrollTop;
     this.prestatationFirstLineComeIn = scrollY >= this.scrollHeightFirstlinetBegin && scrollY <= this.scrollHeightFirstLineFinish;
-    this.prestationSecondLineComeOut = scrollY < this.scrollHeightFirstlinetBegin && scrollY > this.scrollHeightFirstLineFinish;
+    this.prestationFirstLineComeOut = scrollY < this.scrollHeightFirstlinetBegin && scrollY > this.scrollHeightFirstLineFinish;
     this.prestatationSecondLineComeIn = scrollY >= this.scrollHeightSecondlinetBegin && scrollY <= this.scrollHeightSecondLineFinish;
     this.prestationSecondLineComeOut = scrollY < this.scrollHeightSecondlinetBegin && scrollY > this.scrollHeightSecondLineFinish;
-  };
+  }
 }

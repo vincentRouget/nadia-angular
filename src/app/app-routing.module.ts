@@ -3,29 +3,19 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { HomeComponent } from './component/home/home.component';
 import { NavbarComponent } from './component/navbar/navbar.component';
-import { EpilationComponent } from './component/epilation/epilation.component';
-import { MainsComponent } from './component/mains/mains.component';
-import { VisageComponent } from './component/visage/visage.component';
-import { CorpsComponent } from './component/corps/corps.component';
-import { MassageComponent } from './component/massage/massage.component';
-import { MaquillageComponent } from './component/maquillage/maquillage.component';
-import { CommentaryComponent } from './component/commentary/commentary.component';
 import { NavbarAccueilComponent } from './component/navbar-accueil/navbar-accueil.component';
 import { SendCommentaryComponent } from './component/send-commentary/send-commentary.component';
 import { MentionsComponent } from './component/mentions/mentions.component';
 
 const routes: Routes = [
-  {
-    path: '',
-    component: HomeComponent
-  },
+  { path: '', component: HomeComponent },
   {
     path: 'epilation',
     component: NavbarComponent,
     children: [
       {
         path: '',
-        component: EpilationComponent
+        loadChildren: () => import('./component/epilation/epilation.module').then(m => m.EpilationModule)
       }
     ]
   },
@@ -35,8 +25,8 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        component: MainsComponent
-      },
+        loadChildren: () => import('./component/mains/mains.module').then(m => m.MainsModule)
+      }
     ]
   },
   {
@@ -45,7 +35,7 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        component: VisageComponent
+        loadChildren: () => import('./component/visage/visage.module').then(m => m.VisageModule)
       }
     ]
   },
@@ -55,7 +45,7 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        component: CorpsComponent
+        loadChildren: () => import('./component/corps/corps.module').then(m => m.CorpsModule)
       }
     ]
   },
@@ -65,7 +55,7 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        component: MassageComponent
+        loadChildren: () => import('./component/massage/massage.module').then(m => m.MassageModule)
       }
     ]
   },
@@ -75,7 +65,7 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        component: MaquillageComponent
+        loadChildren: () => import('./component/maquillage/maquillage.module').then(m => m.MaquillageModule)
       }
     ]
   },
@@ -99,15 +89,11 @@ const routes: Routes = [
       }
     ]
   },
-  {
-    path: '**',
-    redirectTo: '',
-    pathMatch: 'full'
-  }
+  { path: '**', redirectTo: '', pathMatch: 'full' }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, { useHash: false })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

@@ -1,12 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { Meta, Title } from '@angular/platform-browser';
 import { Visage } from '../../features/models/visage.model';
-
 
 @Component({
   selector: 'app-visage',
   templateUrl: './visage.component.html',
-  styleUrl: './visage.component.css'
+  styleUrls: ['./visage.component.css']
 })
 
 export class VisageComponent implements OnInit {
@@ -26,7 +26,7 @@ export class VisageComponent implements OnInit {
 
   public visageJaponais: Visage[];
 
-  constructor() {
+  constructor(private meta: Meta, private title: Title) {
     //SOINS DU VISAGE
     this.purifiant = new Visage("SOINS", "Soin purifiant Ado, 45 min", "de 12à 17ans", 25);
     this.coup = new Visage("SOINS", "Soin coup d'éclat, 30 min", "", 30);
@@ -37,7 +37,8 @@ export class VisageComponent implements OnInit {
       this.purifiant,
       this.coup,
       this.regenerant,
-      this.specifique];
+      this.specifique
+    ];
 
     //MODELAGE FACIAL JAPONAIS
     this.lifting = new Visage("JAPONAIS", "Lifting manuel du visage, 1H", "Huile adaptée. Stimule le teint, améliore la circulation, relaxant, réduit le vieillissement de la peau, lissant, repulpant", 50);
@@ -45,10 +46,19 @@ export class VisageComponent implements OnInit {
 
     this.visageJaponais = [
       this.lifting,
-      this.cure]
-  };
+      this.cure
+    ];
+  }
 
   ngOnInit(): void {
+    // Définir les métadonnées
+    this.title.setTitle('Soins du Visage et Modelage Facial Japonais');
+    this.meta.addTags([
+      { name: 'description', content: 'Découvrez nos soins du visage et modelage facial japonais pour une peau revitalisée et éclatante.' },
+      { name: 'keywords', content: 'soins du visage, modelage facial japonais, lifting manuel, soins purifiant, hydratant, anti-âge' }
+    ]);
+
+    // Faire défiler vers le haut de la page
     setTimeout(() => {
       try {
         window.scroll(0, 0);

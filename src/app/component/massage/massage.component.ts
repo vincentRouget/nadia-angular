@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import { Meta, Title } from '@angular/platform-browser';
 import { Massage } from '../../features/models/massage.model';
 
 @Component({
   selector: 'app-massage',
   templateUrl: './massage.component.html',
-  styleUrl: './massage.component.css'
+  styleUrls: ['./massage.component.css']
 })
 
 export class MassageComponent implements OnInit {
@@ -23,7 +24,7 @@ export class MassageComponent implements OnInit {
 
   public massageSuedoisArray: Massage[] = [];
 
-  constructor() {
+  constructor(private meta: Meta, private title: Title) {
     // INDIEN
     this.tete = new Massage(
       "Massage Abyanga tête et haut de corps aux huiles chaudes",
@@ -33,7 +34,6 @@ export class MassageComponent implements OnInit {
       "Massage Abhyanga corps entier aux huiles chaudes",
       "Relaxant, réduit les insomnies, stress, anxiété, tension, détoxifiant, irrigation des tissus, meilleur retour veineux, énergie. Réduit la prise de poids, mauvaise estime de soi et/ou dépression",
       70);
-
 
     this.massageArray = [
       this.tete,
@@ -54,10 +54,17 @@ export class MassageComponent implements OnInit {
       this.suedois1,
       this.suedois15
     ]
-
-  };
+  }
 
   ngOnInit(): void {
+    // Définir les métadonnées
+    this.title.setTitle('Services de Massage Ayurvédique et Suédois');
+    this.meta.addTags([
+      { name: 'description', content: 'Découvrez nos massages ayurvédiques et suédois pour une relaxation complète et un bien-être optimal.' },
+      { name: 'keywords', content: 'massage ayurvédique, massage suédois, relaxation, bien-être, réduction du stress, santé' }
+    ]);
+
+    // Faire défiler vers le haut de la page
     setTimeout(() => {
       try {
         window.scroll(0, 0);
