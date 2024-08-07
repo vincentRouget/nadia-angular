@@ -20,16 +20,6 @@ const routes: Routes = [
     component: HomeComponent
   },
   {
-    path: 'commentaires',
-    component: NavbarAccueilComponent,
-    children: [
-      {
-        path: '',
-        component: CommentaryComponent
-      }
-    ]
-  },
-  {
     path: 'epilation',
     component: NavbarComponent,
     children: [

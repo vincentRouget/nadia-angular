@@ -1,6 +1,6 @@
 .navbarAccueil {
     background-color: #fbf7e9;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     display: flex;
@@ -8,6 +8,8 @@
     align-items: center;
     width: 100vw;
     height: 10vh;
+    border-bottom: 1px solid grey;
+    z-index: 1000;
 }
 
 .navbarAccueil_container {

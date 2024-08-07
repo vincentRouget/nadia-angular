@@ -1,0 +1,68 @@
+.mentions {
+    background-color: #e2aaae;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: auto;
+    overflow: hidden;
+}
+
+.mentionsContainer {
+    background-color: #e2aaae;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 90vw;
+    max-width: 100%;
+    height: 100%;
+    font-family: var(--font-family-quaternary);
+    margin-top: 15vh;
+    margin-bottom: 50vh;
+}
+
+.mentionsTitle {
+    font-size: 40px;
+    margin-bottom: 5vh;
+}
+
+.mentionsCategorie {
+    font-size: 24px;
+}
+
+.mentionsSections {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    font-size: 24px;
+    margin: 1vh auto 6vh auto;
+    padding: 0 1vw 0 2vw;
+    line-height: 1.5;
+    white-space: normal;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    overflow: hidden;
+    word-break: break-word;
+}
+
+@media (max-width: 1440px) {}
+
+@media (max-width: 1024px) {}
+
+@media (max-width: 768px) {}
+
+@media (max-width: 480px) {
+    .mentionsSections {
+        font-size: 16px;
+        white-space: normal;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        hyphens: auto;
+        overflow: hidden;
+        word-break: break-word;
+    }
+}

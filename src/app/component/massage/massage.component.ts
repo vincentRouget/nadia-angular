@@ -58,6 +58,17 @@ export class MassageComponent implements OnInit {
   };
 
   ngOnInit(): void {
-    window.scrollTo(0, 0);
-  };
+    setTimeout(() => {
+      try {
+        window.scroll(0, 0);
+      } catch (e) {
+        console.error('window.scroll failed, falling back to window.scrollTo', e);
+        try {
+          window.scrollTo(0, 0);
+        } catch (e2) {
+          console.error('window.scrollTo failed', e2);
+        }
+      }
+    }, 0);
+  }
 }

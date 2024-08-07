@@ -2,6 +2,7 @@
     background-image: url('../../../assets/header.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -47,107 +48,90 @@
 
 .header_title_top {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: 100%;
-    height: 150px;
-    font-size: 80px;
-    text-shadow:
-        -2px -2px 0 #000,
-        2px -2px 0 #000,
-        -2px 2px 0 #000,
-        2px 2px 0 #000;
-    font-weight: bold;
-    margin: 0;
-    line-height: 0;
-    margin-top: -10vh;
-    margin-bottom: 5vh;
-    animation-delay: 0s;
-    color: #e2aaae;
-}
-
-.header_title_bottom {
-    /* background-color: blue; */
-    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    width: 100%;
-    height: 150px;
-    text-align: center;
-    font-size: 56px;
-    text-shadow:
-        -2px -2px 0 #000,
-        2px -2px 0 #000,
-        -2px 2px 0 #000,
-        2px 2px 0 #000;
-    font-weight: bold;
-    margin: 10vh 0px 0px 0px;
-    padding: 10vh 10vw;
-    line-height: 1.2;
+    width: auto;
+    max-width: 80%;
+    height: auto;
+    font-weight: 900;
+    margin: 0;
+    margin-top: -10vh;
+    margin-bottom: 5vh;
+    padding: 2vh 8vh;
     animation-delay: 0s;
     color: #e2aaae;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+#nadia {
+    font-size: 120px;
+    margin-bottom: 2vh;
+}
+
+.slogan {
+    font-size: 80px;
 }
 
 @media (max-width: 1440px) {
     .header {
-        height: 110vh;
         padding: 40px;
     }
 
     .header_title_top {
-        /* background-color: pink; */
-        font-size: 56px;
         margin-top: -8vh;
         margin-bottom: 4vh;
+        padding: 2vh 6vh;
     }
 
-    .header_title_bottom {
-        font-size: 40px;
-        height: 130px;
+    #nadia {
+        font-size: 104px;
+    }
+
+    .slogan {
+        font-size: 72px;
     }
 }
 
 @media (max-width: 1024px) {
-    .header_title_top {
-        /* background-color: grey; */
-        font-size: 48px;
+    #nadia {
+        font-size: 96px;
     }
 
-    .header_title_bottom {
-        font-size: 32px;
+    .slogan {
+        font-size: 56px;
     }
 }
 
 @media (max-width: 768px) {
-    .header_title_top {
-        /* background-color: yellow; */
-        font-size: 40px;
+    #nadia {
+        font-size: 80px;
     }
 
-    .header_title_bottom {
-        font-size: 24px;
+    .slogan {
+        font-size: 48px;
     }
 }
 
 @media (max-width: 480px) {
     .header {
-        height: 100vh;
         padding: 20px;
     }
 
     .header_title_top {
-        /* background-color: blue; */
         font-size: 32px;
-        height: 100px;
+        width: 100%;
+        max-width: 99%;
         margin-top: -5vh;
         margin-bottom: 2.5vh;
     }
 
-    .header_title_bottom {
-        font-size: 20px;
-        height: 100px;
+    #nadia {
+        font-size: 56px;
+    }
+
+    .slogan {
+        font-size: 32px;
     }
 }
