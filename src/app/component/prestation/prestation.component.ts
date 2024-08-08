@@ -34,7 +34,7 @@ export class PrestationComponent implements OnInit {
     this.titleService.setTitle('Prestations de Beauté - Épilation, Soins des Mains, Visage, Corps, Massage, Maquillage');
     this.metaService.addTags([
       { name: 'description', content: 'Découvrez nos prestations de beauté incluant l’épilation, les soins des mains, du visage, du corps, les massages et le maquillage. Profitez d’une expérience personnalisée pour révéler votre beauté naturelle.' },
-      { name: 'keywords', content: 'épilation, soins des mains, soins du visage, soins du corps, massage, maquillage, prestations de beauté' }
+      { name: 'keywords', content: 'Nadia, soins de beauté naturels, esthéticienne, soins du visage et du corps, bien-être, épilation, massage relaxant, maquillage, santé peau, relaxation, Vienne, 86, Mirebeau, Poitiers' }
     ]);
   }
 

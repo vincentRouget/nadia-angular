@@ -20,7 +20,7 @@ export class LaiusComponent implements OnInit {
     this.titleService.setTitle('Soins de Beauté - Notre Philosophie du Visage et du Corps');
     this.metaService.addTags([
       { name: 'description', content: 'Découvrez notre philosophie des soins de beauté, avec des soins du visage et du corps personnalisés, utilisant des produits innovants pour une beauté naturelle.' },
-      { name: 'keywords', content: 'soins de beauté, soins personnalisés, produits naturels, massages relaxants, Nadia, esthéticienne, soins, beauté, corps, nature, naturelle, visage, peau, relaxation, santé, épilation, massage, maquillage, mains, pieds' }
+      { name: 'keywords', content: 'Nadia, soins de beauté naturels, esthéticienne, soins du visage et du corps, bien-être, épilation, massage relaxant, maquillage, santé peau, relaxation, Vienne, 86, Mirebeau, Poitiers' }
     ]);
   }
 

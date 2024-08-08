@@ -28,7 +28,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
     this.titleService.setTitle('Page d\'Accueil - Votre Entreprise');
     this.metaService.addTags([
       { name: 'description', content: 'Bienvenue sur la page d\'accueil de notre site. Découvrez nos services, notre expertise et comment nous pouvons vous aider à atteindre vos objectifs.' },
-      { name: 'keywords', content: 'accueil, entreprise, services, expertise, Nadia, esthéticienne, soins, visage, beauté, corps, nature, naturelle, peau, relaxation, santé, épilation, massage, maquillage, mains, pieds' }
+      { name: 'keywords', content: 'Nadia, soins de beauté naturels, esthéticienne, soins du visage et du corps, bien-être, épilation, massage relaxant, maquillage, santé peau, relaxation, Vienne, 86, Mirebeau, Poitiers' }
     ]);
   };
 

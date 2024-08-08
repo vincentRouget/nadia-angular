@@ -38,7 +38,7 @@ export class CorpsComponent implements OnInit {
     this.title.setTitle('Soins du Corps - Relaxation et Bien-être');
     this.meta.addTags([
       { name: 'description', content: 'Découvrez nos soins du corps pour une relaxation complète : soins pureté, modelage du cou et dos, et modelage du corps.' },
-      { name: 'keywords', content: 'soins du corps, relaxation, bien-être, modelage, pureté' }
+      { name: 'keywords', content: 'Nadia, soins de beauté naturels, esthéticienne, soins du visage et du corps, bien-être, épilation, massage relaxant, maquillage, santé peau, relaxation, Vienne, 86, Mirebeau, Poitiers, modelage, pureté' }
     ]);
 
     // Faire défiler vers le haut de la page

@@ -15,7 +15,7 @@ export class HeaderComponent implements OnInit {
     this.title.setTitle('Header');
     this.meta.addTags([
       { name: 'description', content: 'Description spécifique pour le header.' },
-      { name: 'keywords', content: 'Nadia, esthéticienne, soins, beauté, corps, nature, naturelle, peau, relaxation, santé, épilation, massage, maquillage, mains, pieds, header' }
+      { name: 'keywords', content: 'Nadia, soins de beauté naturels, esthéticienne, soins du visage et du corps, bien-être, épilation, massage relaxant, maquillage, santé peau, relaxation, Vienne, 86, Mirebeau, Poitiers' }
     ]);
   }
 }

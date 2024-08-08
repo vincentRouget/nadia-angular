@@ -17,7 +17,7 @@ export class MomentComponent implements OnInit {
     this.titleService.setTitle('Moments Spécifiques - Votre Moment Parfait');
     this.metaService.addTags([
       { name: 'description', content: 'Découvrez nos moments spécifiques, avec des images évocatrices qui capturent l’essence de votre expérience unique.' },
-      { name: 'keywords', content: 'moments spécifiques, expérience, image, moment parfait, Nadia, esthéticienne, soins, visage, beauté, corps, nature, naturelle, peau, relaxation, santé, épilation, massage, maquillage, mains, pieds' }
+      { name: 'keywords', content: 'moments spécifiques, expérience, image, moment parfait, Nadia, soins de beauté naturels, esthéticienne, soins du visage et du corps, bien-être, épilation, massage relaxant, maquillage, santé peau, relaxation, Vienne, 86, Mirebeau, Poitiers' }
     ]);
   }
 }

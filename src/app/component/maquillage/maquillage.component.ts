@@ -52,7 +52,7 @@ export class MaquillageComponent implements OnInit {
     this.title.setTitle('Maquillage - Votre beauté, notre priorité');
     this.meta.addTags([
       { name: 'description', content: 'Découvrez nos services de maquillage pour toutes les occasions : jour, mariée, et événements spéciaux.' },
-      { name: 'keywords', content: 'maquillage, beauté, jour, mariée, événements spéciaux' }
+      { name: 'keywords', content: 'Nadia, soins de beauté naturels, esthéticienne, soins du visage et du corps, bien-être, épilation, massage relaxant, maquillage, santé peau, relaxation, Vienne, 86, Mirebeau, Poitiers, jour, mariée, événements spéciaux' }
     ]);
 
     // Faire défiler vers le haut de la page

@@ -55,7 +55,7 @@ export class VisageComponent implements OnInit {
     this.title.setTitle('Soins du Visage et Modelage Facial Japonais');
     this.meta.addTags([
       { name: 'description', content: 'Découvrez nos soins du visage et modelage facial japonais pour une peau revitalisée et éclatante.' },
-      { name: 'keywords', content: 'soins du visage, modelage facial japonais, lifting manuel, soins purifiant, hydratant, anti-âge' }
+      { name: 'keywords', content: 'modelage facial japonais, lifting manuel, soins purifiant, hydratant, anti-âge, Nadia, soins de beauté naturels, esthéticienne, soins du visage et du corps, bien-être, épilation, massage relaxant, maquillage, santé peau, relaxation, Vienne, 86, Mirebeau, Poitiers' }
     ]);
 
     // Faire défiler vers le haut de la page

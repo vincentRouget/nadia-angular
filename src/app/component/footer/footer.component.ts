@@ -22,7 +22,7 @@ export class FooterComponent implements OnInit {
     this.title.setTitle('Footer');
     this.meta.addTags([
       { name: 'description', content: 'Description de la page pour le pied de page et autres informations pertinentes.' },
-      { name: 'keywords', content: 'pied de page, informations de contact, horaires, mentions légales, Nadia, esthéticienne, soins, visage, beauté, corps, nature, naturelle, peau, relaxation, santé, épilation, massage, maquillage, mains, pieds ' }
+      { name: 'keywords', content: 'Nadia, soins de beauté naturels, esthéticienne, soins du visage et du corps, bien-être, épilation, massage relaxant, maquillage, santé peau, relaxation, Vienne, 86, Mirebeau, Poitiers' }
     ]);
   }
 }

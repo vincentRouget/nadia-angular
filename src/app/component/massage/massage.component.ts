@@ -61,7 +61,7 @@ export class MassageComponent implements OnInit {
     this.title.setTitle('Services de Massage Ayurvédique et Suédois');
     this.meta.addTags([
       { name: 'description', content: 'Découvrez nos massages ayurvédiques et suédois pour une relaxation complète et un bien-être optimal.' },
-      { name: 'keywords', content: 'massage ayurvédique, massage suédois, relaxation, bien-être, réduction du stress, santé' }
+      { name: 'keywords', content: 'massage ayurvédique, massage suédois, Nadia, soins de beauté naturels, esthéticienne, soins du visage et du corps, bien-être, épilation, massage relaxant, maquillage, santé peau, relaxation, Vienne, 86, Mirebeau, Poitiers, réduction du stress, santé' }
     ]);
 
     // Faire défiler vers le haut de la page
