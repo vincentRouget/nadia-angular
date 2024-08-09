@@ -1,8 +1,8 @@
 import 'zone.js/node';
 import { ngExpressEngine } from '@nguniversal/express-engine';
-import { APP_BASE_HREF } from '@angular/common';
-import { NgModule } from '@angular/core';
-import { ServerModule } from '@angular/platform-server';
+// import { APP_BASE_HREF } from '@angular/common';
+// import { NgModule } from '@angular/core';
+// import { ServerModule } from '@angular/platform-server';
 import { AppServerModule } from './app.server.module';
 import { join } from 'path';
 import express from 'express';
@@ -11,7 +11,7 @@ import express from 'express';
 const app = express();
 
 // Get the port from environment variables or use default value
-const port = process.env['PORT'] || '4000';
+const port = process.env['PORT'] || '4200';
 
 // Define paths for the application
 const distFolder = join(process.cwd(), 'dist/nadia-angular/browser');

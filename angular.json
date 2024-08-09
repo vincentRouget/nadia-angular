@@ -82,7 +82,7 @@
           "builder": "@nguniversal/builders:server",
           "options": {
             "outputPath": "dist/nadia-angular/server",
-            "main": "server.ts",
+            "main": "src/app/server.ts",
             "tsConfig": "tsconfig.server.json"
           }
         },
@@ -109,6 +109,39 @@
             ],
             "scripts": []
           }
+        },
+        "serve-ssr": {
+          "builder": "@nguniversal/builders:ssr-dev-server",
+          "configurations": {
+            "development": {
+              "browserTarget": "nadia-angular:build:development",
+              "serverTarget": "nadia-angular:server:development"
+            },
+            "production": {
+              "browserTarget": "nadia-angular:build:production",
+              "serverTarget": "nadia-angular:server:production"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "prerender": {
+          "builder": "@nguniversal/builders:prerender",
+          "options": {
+            "routes": [
+              "/"
+            ]
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "nadia-angular:build:production",
+              "serverTarget": "nadia-angular:server:production"
+            },
+            "development": {
+              "browserTarget": "nadia-angular:build:development",
+              "serverTarget": "nadia-angular:server:development"
+            }
+          },
+          "defaultConfiguration": "production"
         }
       }
     }
