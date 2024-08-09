@@ -87,7 +87,7 @@ export class EpilationComponent implements OnInit {
 
   ngOnInit(): void {
     // Définir les métadonnées
-    this.title.setTitle('Epilation - Services de qualité pour tous vos besoins');
+    this.title.setTitle('Epilation - Services de qualité');
     this.meta.addTags([
       { name: 'description', content: 'Découvrez nos services d\'épilation pour le visage, le maillot et le corps. Des soins de qualité adaptés à vos besoins.' },
       { name: 'keywords', content: 'épilation maillot, Nadia, soins de beauté naturels, esthéticienne, soins du visage et du corps, bien-être, épilation, massage relaxant, maquillage, santé peau, relaxation, Vienne, 86, Mirebeau, Poitiers' }

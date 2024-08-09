@@ -55,7 +55,7 @@ export class MainsComponent implements OnInit {
 
   ngOnInit(): void {
     // Définir les métadonnées
-    this.title.setTitle('Services de Beauté pour les Mains et les Pieds');
+    this.title.setTitle('Manucure et pédicure');
     this.meta.addTags([
       { name: 'description', content: 'Découvrez nos services de manucure, pédicure, et pose de vernis semi permanent pour des mains et des pieds parfaits.' },
       { name: 'keywords', content: 'manucure, pédicure, vernis semi permanent, soins des mains, soins des pieds, Nadia, soins de beauté naturels, esthéticienne, soins du visage et du corps, bien-être, épilation, massage relaxant, maquillage, santé peau, relaxation, Vienne, 86, Mirebeau, Poitiers' }

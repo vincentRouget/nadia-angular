@@ -21,11 +21,11 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:application",
+          "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/nadia-angular",
+            "outputPath": "dist/nadia-angular/browser",
             "index": "src/index.html",
-            "browser": "src/main.ts",
+            "main": "src/main.ts",
             "polyfills": [
               "zone.js"
             ],
@@ -65,20 +65,31 @@
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "nadia-angular:build"
+          },
           "configurations": {
             "production": {
-              "buildTarget": "nadia-angular:build:production"
+              "browserTarget": "nadia-angular:build:production"
             },
             "development": {
-              "buildTarget": "nadia-angular:build:development"
+              "browserTarget": "nadia-angular:build:development"
             }
           },
           "defaultConfiguration": "development"
         },
+        "server": {
+          "builder": "@nguniversal/builders:server",
+          "options": {
+            "outputPath": "dist/nadia-angular/server",
+            "main": "server.ts",
+            "tsConfig": "tsconfig.server.json"
+          }
+        },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "nadia-angular:build"
+            "browserTarget": "nadia-angular:build"
           }
         },
         "test": {

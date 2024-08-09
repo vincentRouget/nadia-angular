@@ -58,7 +58,7 @@ export class MassageComponent implements OnInit {
 
   ngOnInit(): void {
     // Définir les métadonnées
-    this.title.setTitle('Services de Massage Ayurvédique et Suédois');
+    this.title.setTitle('Massage indien et suédois');
     this.meta.addTags([
       { name: 'description', content: 'Découvrez nos massages ayurvédiques et suédois pour une relaxation complète et un bien-être optimal.' },
       { name: 'keywords', content: 'massage ayurvédique, massage suédois, Nadia, soins de beauté naturels, esthéticienne, soins du visage et du corps, bien-être, épilation, massage relaxant, maquillage, santé peau, relaxation, Vienne, 86, Mirebeau, Poitiers, réduction du stress, santé' }

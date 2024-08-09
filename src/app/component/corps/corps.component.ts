@@ -35,7 +35,7 @@ export class CorpsComponent implements OnInit {
 
   ngOnInit(): void {
     // Définir les métadonnées
-    this.title.setTitle('Soins du Corps - Relaxation et Bien-être');
+    this.title.setTitle('Soins du corps et relaxation');
     this.meta.addTags([
       { name: 'description', content: 'Découvrez nos soins du corps pour une relaxation complète : soins pureté, modelage du cou et dos, et modelage du corps.' },
       { name: 'keywords', content: 'Nadia, soins de beauté naturels, esthéticienne, soins du visage et du corps, bien-être, épilation, massage relaxant, maquillage, santé peau, relaxation, Vienne, 86, Mirebeau, Poitiers, modelage, pureté' }

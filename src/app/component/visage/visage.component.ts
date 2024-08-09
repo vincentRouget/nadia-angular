@@ -52,7 +52,7 @@ export class VisageComponent implements OnInit {
 
   ngOnInit(): void {
     // Définir les métadonnées
-    this.title.setTitle('Soins du Visage et Modelage Facial Japonais');
+    this.title.setTitle('Soins et modelage facial');
     this.meta.addTags([
       { name: 'description', content: 'Découvrez nos soins du visage et modelage facial japonais pour une peau revitalisée et éclatante.' },
       { name: 'keywords', content: 'modelage facial japonais, lifting manuel, soins purifiant, hydratant, anti-âge, Nadia, soins de beauté naturels, esthéticienne, soins du visage et du corps, bien-être, épilation, massage relaxant, maquillage, santé peau, relaxation, Vienne, 86, Mirebeau, Poitiers' }
