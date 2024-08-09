@@ -2,23 +2,74 @@
     <h1 class="massage_title">Modelage ayurvédique et suédois</h1>
     <div class="massage_container">
         <div class="massage_indien">
-            <div class="massage_liste">
-                <h1 class="section">Massage indien (ayurvédique)</h1>
-                <div *ngFor="let massage of massageArray" class="ligne">
-                    <div class="name_detail">
-                        <p class="name">{{ massage.name }} </p>
-                        <p class="detail">{{massage.detail}}</p>
+            <div [ngClass]="{'massage_liste': !isDetailsOpen, 'massage_details': isDetailsOpen}">
+                <h1 class="section">Massage indien (ayurvédique)
+                    <div class="button">
+                        <button (click)="handleDetails()" class="buttonDetails">
+                            <img *ngIf="isDetailsOpen" src={{moins}} alt="Détails" class="icone">
+                            <img *ngIf="!isDetailsOpen" src={{plus}} alt="Détails" class="icone">
+                        </button>
                     </div>
-                    <div class="dot">
-                        <p class="hiddenDot">{{dot}}</p>
+                </h1>
+                <div *ngIf="!isDetailsOpen" class="content">
+                    <div *ngFor="let massage of massageArray" class="ligne">
+                        <div class="name_detail">
+                            <p class="name">{{ massage.name }} </p>
+                            <p class="detail">{{massage.detail}}</p>
+                        </div>
+                        <div class="dot">
+                            <p class="hiddenDot">{{dot}}</p>
+                        </div>
+                        <div class="prix">
+                            <p>{{ massage.prix }} €</p>
+                        </div>
                     </div>
-                    <div class="prix">
-                        <p>{{ massage.prix }} €</p>
+                </div>
+                <div *ngIf="isDetailsOpen" class="content">
+                    <div class="historique">
+                        <h3 class="detailsTitle">Historique :</h3>
+                        <p class="detailsContent">La légende attribue aux Rishis, sages de la tradition védique et
+                            poètes ayant rédigés et
+                            compilé les Vedas, l'origine de la connaissance de l'Ayurveda par les hommes</p>
+                        <p class="detailsContent">A une époque où l'homme est accablé par les épidémies et maladies, les
+                            rishis auraient reçu
+                            des dieux des messages contenant entre autres des remèdes et procédés ayurvédiques,
+                            recueillis ensuite dans le Rig-Veda et l'Atharva-Veda.</p>
+                        <p class="detailsContent">La Charaka Samhita, la Sushruta Samhita et l'Ashtanga Hridaya, traités
+                            rédigés et agrémentés
+                            au début de l'ère Chrétienne par des médecins réputés, constituent encore aujourd'hui la
+                            bibliographie de base utilisée par les étudiants en médecine ayurvédique en Inde.</p>
+                        <h3 class="detailsTitle">Les bienfaits du massage Ayurvédique :</h3>
+                        <p class="detailsContent">La pression principale suit la circulation du prana dans le corps,
+                            permettant ainsi une bonne
+                            dynamisation des fluides.</p>
+                        <p class="detailsContent">Il allie enveloppement et fermeté, tonicité et relaxation, variation
+                            de rythme et adaptation
+                            à l'individu.</p>
+                        <p class="detailsContent">Il purifie le corps, améliore la circulation sanguine, lève les
+                            blocages en assouplissant les
+                            tissus, pallie les méfaits du stress à court terme et long terme si reçu de manière
+                            fréquente et réguliére, résorbe la fatigue, lubrifie les articulations, détend les
+                            contractions musculaires, nourrit le corps et l'esprit.</p>
+                        <p class="detailsContent">Il a des implications sur tous les plans de l'être : sur le physique,
+                            sur le mental qu'il
+                            apaise et recentre, et sur le plan spirituel puisqu'il est un excellent moment
+                            d'intériorisation et de prise de conscience de soi.</p>
+                        <p class="detailsContent">Ce massage est adpté à tous les âges.</p>
+                        <h3 class="detailsTitle">Contre-indications :</h3>
+                        <p class="detailsContent">Grossesse,</p>
+                        <p class="detailsContent">Maladie infectieuse ou inflammation aigüe de la peau,</p>
+                        <p class="detailsContent">Oedème,</p>
+                        <p class="detailsContent">Fièvre, état grippal,</p>
+                        <p class="detailsContent">Rhume invalidant,</p>
+                        <p class="detailsContent">Opération récente,</p>
+                        <p class="detailsContent">Cancer,</p>
+                        <p class="detailsContent">Sous-emprise de l'alcool ou de stupéfiants.</p>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="massage_suedois">
+        <div *ngIf="!isDetailsOpen" class="massage_suedois">
             <div class="massage_liste">
                 <h1 class="section">Massage suédois</h1>
                 <div class="description">
@@ -32,16 +83,17 @@
                         diminution des tensions musculaires,
                         apaise les terminaisons des nerfs et calme les tensions émotionnelles.</p>
                 </div>
-                <div *ngFor="let massage of massageSuedoisArray" class="ligne">
-                    <div class="name_detail">
-                        <p class="name nowrap">{{ massage.name }} </p>
-                        <p class="detail">{{massage.detail}}</p>
-                    </div>
-                    <div class="dot">
-                        <p class="hiddenDot">{{dot}}</p>
-                    </div>
-                    <div class="prix">
-                        <p>{{ massage.prix }} €</p>
+                <div class="content">
+                    <div *ngFor="let massage of massageSuedoisArray" class="ligne">
+                        <div class="name_detail">
+                            <p class="name">{{ massage.name }} </p>
+                        </div>
+                        <div class="dot">
+                            <p class="hiddenDot">{{dot}}</p>
+                        </div>
+                        <div class="prix">
+                            <p>{{ massage.prix }} €</p>
+                        </div>
                     </div>
                 </div>
             </div>

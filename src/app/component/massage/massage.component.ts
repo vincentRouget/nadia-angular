@@ -10,7 +10,12 @@ import { Massage } from '../../features/models/massage.model';
 
 export class MassageComponent implements OnInit {
 
+  plus: string = '../../../assets/icons8-plus-100.png';
+  moins: string = '../../../assets/icons8-minus-100.png';
+
   public dot: string = '.'.repeat(500);
+
+  isDetailsOpen: boolean = false;
 
   // INDIEN
   public tete: Massage;
@@ -54,7 +59,12 @@ export class MassageComponent implements OnInit {
       this.suedois1,
       this.suedois15
     ]
-  }
+  };
+
+  public handleDetails() {
+    this.isDetailsOpen = !this.isDetailsOpen;
+    console.log("details");
+  };
 
   ngOnInit(): void {
     // Définir les métadonnées

@@ -61,9 +61,56 @@
     margin-bottom: 10vh;
 }
 
+.massage_details {
+    background-color: #fbf7e9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    padding: 20px 30px 50px 30px;
+    border: 2px solid #b28c23;
+    margin-bottom: 10vh;
+}
+
+.detailsTitle {
+    font-size: 32px;
+    margin: 4vw auto 1vw auto;
+}
+
+.detailsContent {
+    font-size: 24px;
+}
+
 .section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     margin-bottom: 20px;
     text-align: center;
+}
+
+.button {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.buttonDetails {
+    background-color: #fbf7e9;
+    width: 30px;
+    height: 30px;
+    border: none;
+    margin-left: 20px;
+    margin-top: 4px;
+    cursor: pointer;
+}
+
+.icone {
+    width: 100%;
+    height: 100%;
 }
 
 .description {
@@ -73,6 +120,14 @@
     align-items: center;
     text-align: center;
     margin-bottom: 30px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
 
 .ligne {
@@ -119,6 +174,8 @@
 @media (max-width: 1440px) {
     .massage_container {
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     .massage_liste {
@@ -159,12 +216,46 @@
         padding: 20px 30px;
     }
 
+    .detailsTitle {
+        font-size: 24px;
+    }
+
+    .detailsContent {
+        font-size: 20px;
+    }
+
     .dot {
         width: 40%;
     }
 }
 
 @media (max-width: 480px) {
+    .massage_title {
+        font-size: 28px;
+        padding: 0;
+    }
+
+    .section {
+        flex-direction: column;
+        font-size: 28px;
+    }
+
+    .buttonDetails {
+        margin: 10px 0 30px 0;
+    }
+
+    .massage_details {
+        padding: 20px 10px 50px 10px;
+    }
+
+    .detailsTitle {
+        font-size: 24px;
+    }
+
+    .detailsContent {
+        font-size: 16px;
+    }
+
     .ligne {
         flex-direction: column;
     }
