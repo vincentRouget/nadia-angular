@@ -20,9 +20,25 @@ export class HomeComponent implements OnInit, AfterViewInit {
   };
 
   ngOnInit(): void {
-    const storedPosition = localStorage.getItem('scrollPosition');
-    let localPosition = storedPosition ? +storedPosition : 0;
-    window.scrollTo(0, localPosition);
+
+    // Sauvegarder position scroll Y lors du changement URL :
+    // const storedPosition = localStorage.getItem('scrollPosition');
+    // let localPosition = storedPosition ? +storedPosition : 0;
+    // window.scrollTo(0, localPosition);
+
+    // Haut de page automatique lors du changement URL :
+    setTimeout(() => {
+      try {
+        window.scroll(0, 0);
+      } catch (e) {
+        console.error('window.scroll failed, falling back to window.scrollTo', e);
+        try {
+          window.scrollTo(0, 0);
+        } catch (e2) {
+          console.error('window.scrollTo failed', e2);
+        }
+      }
+    }, 0);
 
     // Set SEO title and meta tags
     this.titleService.setTitle('Page d\'Accueil - Nadia');
