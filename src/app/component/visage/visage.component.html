@@ -1,27 +1,78 @@
 <div class="visage">
     <h1 class="visage_title">Soins du visage</h1>
     <div class="visage_container">
-        <div class="visage_visage">
-            <div class="visage_liste">
-                <h1>Les soins du visage</h1>
-                <div *ngFor="let visage of visageSoins" class="ligne">
-                    <div class="name_detail">
-                        <p class="name">{{ visage.name }} </p>
-                        <p class="detail">{{visage.detail}}</p>
+        <div class="visage_japonais">
+            <div [ngClass]="{'visage_liste': !isDetailsOpen, 'visage_details': isDetailsOpen}">
+                <h1 class="section">Modelage facial japonais
+                    <div class="button">
+                        <button (click)="handleDetails()" class="buttonDetails">
+                            <img *ngIf="isDetailsOpen" src={{moins}} alt="Détails" class="icone">
+                            <img *ngIf="!isDetailsOpen" src={{plus}} alt="Détails" class="icone">
+                        </button>
                     </div>
-                    <div class="dot">
-                        <p class="hiddenDot">{{dot}}</p>
+                </h1>
+                <div *ngIf="!isDetailsOpen" class="content">
+                    <div *ngFor="let visage of visageJaponais" class="ligne">
+                        <div class="name_detail">
+                            <p class="name">{{ visage.name }} </p>
+                            <p class="detail">{{visage.detail}}</p>
+                        </div>
+                        <div class="dot">
+                            <p class="hiddenDot">{{dot}}</p>
+                        </div>
+                        <div class="prix">
+                            <p>{{ visage.prix }} €</p>
+                        </div>
                     </div>
-                    <div class="prix">
-                        <p>{{ visage.prix }} €</p>
+                </div>
+                <div *ngIf="isDetailsOpen" class="content">
+                    <div class="historique">
+                        <h3 class="detailsTitle">Historique :</h3>
+                        <p class="detailsContent">Le "Ko Bi Do" se traduit du japonais par "voie ancienne de la
+                            beauté".</p>
+                        <p class="detailsContent">Ce massage vise à combattre le vieillssement du visage.</p>
+                        <p class="detailsContent">Kobido ou "voie ancienne de la beauté" est un art ancestral japonais
+                            qui remonte à 1472. Longtemps réservé exclusivement à l'impératrice et ses courtisanes,
+                            c'était le secret bien gardé de leur peau parfaitement ferme et lisse.</p>
+                        <p class="detailsContent">Les maîtres Kobido, attitrés de l'impératrice, se succédent de père en
+                            fils depuis 26 générations.</p>
+                        <p class="detailsContent">Le Kobido a traversé les siècles sans prendre une ride!</p>
+                        <p class="detailsContent">Et quelle chance que ce savoir ancestral ait traversé les murs du
+                            palais impérial!</p>
+                        <p class="detailsContent">Depuis qu'il a franchi les frontières de l'empire du soleil levant, le
+                            Kobido n'a pas encore fini de conquérir l'occident.</p>
+                        <p class="detailsContent">Au japon, le concept de beauté ne peut pas être dissocié de celui de
+                            bien-être et d'une bonne santé.</p>
+                        <p class="detailsContent">Le Kobido, une des techniques de massage facial les plus
+                            complexes et les plus efficaces au monde, est la voie ancienne, mais aussi contemporaine de
+                            la
+                            beauté.</p>
+                        <h3 class="detailsTitle">Les bienfaits du massage "Ko Bi Do" :</h3>
+                        <p class="detailsContent">Le massage Kobido alterne entre digito-pressions douces issues du
+                            Shiatsu, pressions pincées et lissages du visage.</p>
+                        <p class="detailsContent">Il s'effectue avec une huile aux propriétés adaptées à la zone du
+                            visage. La peau est stimulée grâce à des mouvements de pétrissage des muscles et des
+                            pressions au niveau de méridiens énergétiques, issues du Shiatsu.</p>
+                        <p class="detailsContent">Entre autres, les méridiens du gros intestin et de la vessie, pour
+                            stimuler l'élimination, et donc purifier et éclaircir le teint.</p>
+                        <p class="detailsContent">Ceux de l'estomac et de la rate, pour une meilleure assimilation des
+                            nutriments nécessaires à la peau, le triple réchauffeur, pour favoriser la circulation de
+                            l'énergie.</p>
+                        <p class="detailsContent">Sa pratique régulière améliore de façon notoire l'aspect général de la
+                            peau et retarde l'apparition des rides. Il repulpe, régénère les tissus.</p>
+                        <p class="detailsContent">Le résultat : le teint est éclatant, les muscles détendus et toniques,
+                            les toxines drainées.</p>
+                        <p class="detailsContent">Ce massage est adapté à partir de 30 ans.</p>
+                        <h3 class="detailsTitle">Contre-indications :</h3>
+                        <p class="detailsContent">Aucune.</p>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="visage_japonais">
+        <div *ngIf="!isDetailsOpen" class="visage_visage">
             <div class="visage_liste">
-                <h1>Modelage facial japonais</h1>
-                <div *ngFor="let visage of visageJaponais" class="ligne">
+                <h1 class="section">Les soins du visage</h1>
+                <div *ngFor="let visage of visageSoins" class="ligne">
                     <div class="name_detail">
                         <p class="name">{{ visage.name }} </p>
                         <p class="detail">{{visage.detail}}</p>

@@ -10,7 +10,13 @@ import { Visage } from '../../features/models/visage.model';
 })
 
 export class VisageComponent implements OnInit {
+
+  plus: string = '../../../assets/icons8-plus-100.png';
+  moins: string = '../../../assets/icons8-minus-100.png';
+
   public dot: string = '.'.repeat(500);
+
+  isDetailsOpen: boolean = false;
 
   //SOINS DU VISAGE
   public purifiant: Visage;
@@ -48,7 +54,12 @@ export class VisageComponent implements OnInit {
       this.lifting,
       this.cure
     ];
-  }
+  };
+
+  public handleDetails() {
+    this.isDetailsOpen = !this.isDetailsOpen;
+    console.log("details");
+  };
 
   ngOnInit(): void {
     // Définir les métadonnées
