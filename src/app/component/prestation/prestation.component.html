@@ -1,48 +1,36 @@
 <div class="prestation">
     <div class="photos" (window:scroll)="onScroll($event)">
-        <a [routerLink]="['/epilation']"
-            [ngClass]="{'handle-in': prestatationFirstLineComeIn && !prestationFirstLineComeOut, 'handle-out': prestationFirstLineComeOut}"
-            class="handle">
+        <a [routerLink]="['/epilation']" class="handle">
             <div class="photo">
                 <img src={{epilation}} alt="Epilation" class="image">
                 <h2 class="soinTitle">Epilation</h2>
             </div>
         </a>
-        <a [routerLink]="['/soins_des_mains']"
-            [ngClass]="{'handle-in': prestatationFirstLineComeIn && !prestationFirstLineComeOut, 'handle-out': prestationFirstLineComeOut}"
-            class="handle">
+        <a [routerLink]="['/soins_des_mains']" class="handle">
             <div class="photo">
                 <img src={{mains}} alt="Soins des mains et des pieds" class="image">
                 <h2 class="soinTitle">Soins des mains et des pieds</h2>
             </div>
         </a>
-        <a [routerLink]="['/visage']"
-            [ngClass]="{'handle-in': prestatationFirstLineComeIn && !prestationFirstLineComeOut, 'handle-out': prestationFirstLineComeOut}"
-            class="handle">
+        <a [routerLink]="['/visage']" class="handle">
             <div class="photo">
                 <img src={{visage}} alt="Soins du visage" class="image">
                 <h2 class="soinTitle">Soins du visage</h2>
             </div>
         </a>
-        <a [routerLink]="['/corps']"
-            [ngClass]="{'handle-in': prestatationSecondLineComeIn && !prestationSecondLineComeOut, 'handle-out': prestationSecondLineComeOut}"
-            class="handle">
+        <a [routerLink]="['/corps']" class="handle">
             <div class="photo">
                 <img src={{corps}} alt="Soins du corps" class="image">
                 <h2 class="soinTitle">Soins du corps</h2>
             </div>
         </a>
-        <a [routerLink]="['/massage']"
-            [ngClass]="{'handle-in': prestatationSecondLineComeIn && !prestationSecondLineComeOut, 'handle-out': prestationSecondLineComeOut}"
-            class="handle">
+        <a [routerLink]="['/massage']" class="handle">
             <div class="photo">
                 <img src={{massage}} alt="Massage" class="image">
                 <h2 class="soinTitle">Massage</h2>
             </div>
         </a>
-        <a [routerLink]="['/maquillage']"
-            [ngClass]="{'handle-in': prestatationSecondLineComeIn && !prestationSecondLineComeOut, 'handle-out': prestationSecondLineComeOut}"
-            class="handle">
+        <a [routerLink]="['/maquillage']" class="handle">
             <div class="photo">
                 <img src={{maquillage}} alt="Maquillage" class="image">
                 <h2 class="soinTitle">Maquillage</h2>

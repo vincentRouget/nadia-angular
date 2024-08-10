@@ -1,4 +1,4 @@
-import { Component, OnInit, HostListener } from '@angular/core';
+import { Component, OnInit, HostListener, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
 import { Title, Meta } from '@angular/platform-browser';
 
 @Component({
@@ -6,12 +6,16 @@ import { Title, Meta } from '@angular/platform-browser';
   templateUrl: './laius.component.html',
   styleUrls: ['./laius.component.css'],
 })
-export class LaiusComponent implements OnInit {
+export class LaiusComponent implements OnInit, AfterViewInit {
   pitch: string = "Soins de beauté";
+
   laiusComeIn = false;
   laiusComeOut = false;
-  private scrollHeightBegin = 1100;
-  private scrollHeightFinish = 1800;
+
+  private scrollHeightBegin = 0;
+  private scrollHeightFinish = 0;
+
+  @ViewChild('laiusContainer') laiusContainer!: ElementRef;
 
   constructor(private titleService: Title, private metaService: Meta) { }
 
@@ -24,10 +28,19 @@ export class LaiusComponent implements OnInit {
     ]);
   }
 
+  ngAfterViewInit(): void {
+    // Calcul des hauteurs en pourcentage
+    const componentHeight = this.laiusContainer.nativeElement.offsetHeight;
+    this.scrollHeightBegin = componentHeight * 0;
+    this.scrollHeightFinish = componentHeight * 0.5;
+  }
+
   @HostListener('window:scroll', ['$event'])
   onScroll(event: Event): void {
     const scrollY = window.scrollY || document.documentElement.scrollTop;
-    this.laiusComeIn = scrollY >= this.scrollHeightBegin && scrollY <= this.scrollHeightFinish;
-    this.laiusComeOut = scrollY < this.scrollHeightBegin || scrollY > this.scrollHeightFinish;
+    const componentTop = this.laiusContainer.nativeElement.getBoundingClientRect().top + scrollY;
+
+    this.laiusComeIn = scrollY >= componentTop + this.scrollHeightBegin && scrollY <= componentTop + this.scrollHeightFinish;
+    this.laiusComeOut = scrollY < componentTop + this.scrollHeightBegin || scrollY > componentTop + this.scrollHeightFinish;
   }
 }
